@@ -1,48 +1,84 @@
-Gavim - Gaveen's Vim Configuration
-====================================
+Gavim2 - Gaveen's Vim Configuration v 2.0
+===========================================
 
-This is the Vim configuration I actually use.
+This is the Vim configuration I actually use. If you are somehow using my
+older Vim configuration from http://github.com/gaveen/gavim I suggest you
+switched to this. This version is much more organized. I don't think I'll
+be maintaining or using the old one anymore. And oh, by the way I mostly
+use gVim/vim-X11 these days.
 
-I'm working on a Fedora Linux system. By default there's a very decent Vim
-configuration in Fedora. So I took the default global Vim configuration file
-in a Fedora 10 system and did the tweaks to get it to my liking. As you would
-have expected, a significant part of the vimrc is straight from Fedora. While
-some of the plugins are taken from vim.org, some are taken from the source.
 
-This is the current setting I use. If you plan to use this for your
-configuration, please note that you will need Ruby installed and in your path
-(for the fuzzy finder textmate plugin). Here are the plugins I use:
-  - NERD_tree (file browser)
-  - NERD Commenter (commenting)
-  - Snipmate (snippet completion)
-  - Scratch (temoprary buffer)
-  - Rails (for Ruby on Rails)
-  - Vim-LaTeX suite (for TeX/LaTeX)
-  - Fuzzy_Finder_Textmate (search for files and open)
-  - Gist (make gits to gist.github.com)
-  - VCS-Git (Git Distributed VCS support)
-  - Matchit
-  - and some more
+How to install (on Linux)
+--------------------------
+1. Clone this repo
+2. Open a command line in the repo directory
+3. $ git submodule init
+4. $ git submodule update
+5. Delete the directory ./vim/bundle/snipmate/snippets
+6. Link the following
+	6.1 gvimrc as ~/.gvimrc
+	6.2 vimrc as ~/.vimrc
+	6.3 vim/ as ~/.vim
+
+I'm too lazy to write an installer script for the above. May be later.
+ 
+
+
+Since I work most of the time in an up to date Fedora (Linux) system, I took
+the liberty of taking some parts of my .vimrc directly from the very decent
+default Vim configuration found in a Fedora (10) system. The rest filled,
+tuned and tweaked until it felt right.
+
+Most of the plugins are added as git submodules and all of the plugins are
+kept separately as bundles things to Tim Pope's awesome vim-pathogen plugin.
+Since I removed a lot of cruft from the original version and added a couple
+of neat things, there's bound to be more dependencies. On the plus side it's
+much much more convenient with the set of things I use.
+
+
+Dependencies
+-------------
+My Vim configuration assumes the following programs are installed in your
+system and are ready to be used.
+  # ack - the better grep if you plan to use :Ack
+	(Debian/Ubuntu people need ack-grep package and also set the proper
+	 value for in vimrc. Eg: let g:ackprg="ack -H --nocolor --nogroup" )
+  # python - if you plan to use the Conque Terminal i.e., <leader>t
+  # vim-latex - Vim LaTeX Suite plugin http://vim-latex.sourceforge.net/
+	if you plan to do a lot of LaTeX/TeX work, this is simply great. The
+	configuration is already done in vimrc.
+  # git - and finally if you want to grab and use my vimfiles and update it
+	you will need git.
+
+
+
+Plugins
+--------
+These are the plugins I've included in this set of files.
+  - ack.vim (pattern matching) - :Ack pattern optional_path
+  - bufexploreer (buffer explorer) - <leader>be
+  - conque (embedded terminal) - <leader>t
+  - matchit (pair matching)
+  - nerdcommenter (commenting)
+  - nerdtree (file browser) - <leader>d
+  - pathogen (plugin bundle handling)
+  - scratch (temporary buffer)
+  - snipmate (snippets)
+  - rails (for Ruby on Rails)
+  - vcscommand (generic VCS frontend)
+  - fugitive (Git wrapper)
+
 
 Vim 7.2 already has some great additional features like spell checking, word
-completion, etc. I'm only interested in maintaining this configuration for the
-Vim version I'm using, which happened to be 7.2 as of this writing.
+completion, code folding, etc. I'm only interested in maintaining this
+configuration for the Vim version I'm using, which happened to be 7.2 as of
+this writing.
 
 A few colorchemes are included, where some of them are directly from the
 default vim installation in Fedora. To get the best view of the color schemes
-t_Co=256 is set in the .vimrc file.
+t_Co=256 is set by default in the .vimrc file.
 
-
-How to use this as your configuration
----------------------------------------
-It's straight forward if you don't have custom Vim configuration. Just
-clone this repo and either link (ln -s) or copy the
-  1. vimrc as ~/.vimrc
-  2. vim/ as ~/.vim
-  3. gvimrc as ~/.gvimrc
-
-That's all.
 
 Thanks goes to many many Vim users for making the plugins, snippets, syntax,
 etc. files and also for making their Vim configuration public so that I could
-learn from them.
+learn from them. That's all for now.
