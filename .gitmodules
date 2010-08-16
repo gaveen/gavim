@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vcscommand"]
 	path = vim/bundle/vcscommand
 	url = git://repo.or.cz/vcscommand
+[submodule "vim/snippets"]
+	path = vim/snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
