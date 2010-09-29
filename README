@@ -67,6 +67,7 @@ These are the plugins I've included in this set of files.
   - rails (for Ruby on Rails)
   - vcscommand (generic VCS frontend)
   - fugitive (Git wrapper)
+  - guicolorscheme (use GUI colorchemes in console)
 
 
 Vim 7.2 already has some great additional features like spell checking, word
