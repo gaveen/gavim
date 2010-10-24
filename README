@@ -1,15 +1,16 @@
 Gavim2 - Gaveen's Vim Configuration v 2.0
-===========================================
+=========================================
 
 This is the Vim configuration I actually use. If you are somehow using my
 older Vim configuration from http://github.com/gaveen/gavim I suggest you
-switched to this. This version is much more organized. I don't think I'll
-be maintaining or using the old one anymore. And oh, by the way I mostly
-use gVim/vim-X11 these days.
+switch to this. This version is much more organized. I won't be maintaining
+or using the old one anymore.
+
+I recommend using gvim/vim-X11/vim-gnome/etc. But it's not a must.
 
 
 How to install (on Linux)
---------------------------
+-------------------------
 1. Clone this repo
 2. Open a command line in the repo directory
 3. $ git submodule init
@@ -20,49 +21,59 @@ How to install (on Linux)
 	6.2 vimrc as ~/.vimrc
 	6.3 vim/ as ~/.vim
 
-I'm too lazy to write an installer script for the above. May be later.
- 
+
+How to update (on Linux)
+------------------------
+1. Change into the cloned repos directory (i.e., use 'cd' command)
+2. $ git pull
+3. $ git submodule update
+
+I'm too lazy to write a script for the above tasks. May be later.
 
 
 Since I work most of the time in an up to date Fedora (Linux) system, I took
 the liberty of taking some parts of my .vimrc directly from the very decent
-default Vim configuration found in a Fedora (10) system. The rest filled,
+default Vim configuration found in a Fedora (10) system. The rest I filled,
 tuned and tweaked until it felt right.
 
-Most of the plugins are added as git submodules and all of the plugins are
-kept separately as bundles things to Tim Pope's awesome vim-pathogen plugin.
-Since I removed a lot of cruft from the original version and added a couple
-of neat things, there's bound to be more dependencies. On the plus side it's
-much much more convenient with the set of things I use.
+Most of the plugins are added as git submodules (which aren't have a version
+number in the bundle name) and all of the plugins are kept separately as
+bundles by using Tim Pope's awesome vim-pathogen plugin.
+
+Since I removed a lot of cruft from the original version of gavim, added a
+couple of neat things and tuned some more, there's bound to be more
+dependencies. On the plus side this version is much much more convenient to
+setup and use for stuff I do.
 
 
 Dependencies
--------------
+------------
 My Vim configuration assumes the following programs are installed in your
 system and are ready to be used.
-  # ack - the better grep if you plan to use :Ack
-	(Debian/Ubuntu people need ack-grep package and also set the proper
-	 value for in vimrc. Eg: let g:ackprg="ack -H --nocolor --nogroup" )
+  # ack - the better grep (if you plan to use :Ack)
+	(Debian/Ubuntu people need ack-grep package and also to set the proper
+	 value in vimrc. Eg: let g:ackprg="ack-grep -H --nocolor --nogroup" )
   # python - if you plan to use the Conque Terminal i.e., <leader>t
   # vim-latex - Vim LaTeX Suite plugin http://vim-latex.sourceforge.net/
 	if you plan to do a lot of LaTeX/TeX work, this is simply great. The
 	configuration is already done in vimrc.
   # git - and finally if you want to grab and use my vimfiles and update it
 	you will need git.
-
+  # vim version at least 7.3 compiled with +ruby if you want to use relative
+	line numbering (i.e., set relativenumber)
 
 
 Plugins
---------
+-------
 These are the plugins I've included in this set of files.
   - ack.vim (pattern matching) - :Ack pattern optional_path
   - bufexploreer (buffer explorer) - <leader>be
   - conque (embedded terminal) - <leader>t
   - matchit (pair matching)
-  - nerdcommenter (commenting)
+  - nerdcommenter (commenting) - <leader>c<space>
   - nerdtree (file browser) - <leader>d
   - pathogen (plugin bundle handling)
-  - scratch (temporary buffer)
+  - scratch (temporary buffer) - <leader>s
   - snipmate (snippets)
   - rails (for Ruby on Rails)
   - vcscommand (generic VCS frontend)
@@ -70,16 +81,18 @@ These are the plugins I've included in this set of files.
   - guicolorscheme (use GUI colorchemes in console)
 
 
-Vim 7.2 already has some great additional features like spell checking, word
-completion, code folding, etc. I'm only interested in maintaining this
-configuration for the Vim version I'm using, which happened to be 7.2 as of
-this writing.
+Vim 7.2 (or higher) already have some great additional features like spell
+checking, word completion, code folding, etc. I'm only interested in
+maintaining this configuration for the Vim version I'm using, which happened
+to be 7.2 as of this writing.
 
-A few colorchemes are included, where some of them are directly from the
+A few colorchemes are also included. Some of them were directly taken from the
 default vim installation in Fedora. To get the best view of the color schemes
 t_Co=256 is set by default in the .vimrc file.
 
 
-Thanks goes to many many Vim users for making the plugins, snippets, syntax,
-etc. files and also for making their Vim configuration public so that I could
-learn from them. That's all for now.
+Thanks go to many many Vim users for sharing the plugins, snippets, syntax,
+etc. files and also for making their Vim configuration public so that others
+could learn from them.
+
+Free vim tip: <Ctrl-r>+ in insert mode will paste from the OS clipboard.
