@@ -115,7 +115,7 @@ setlocal nofoldenable
 let g:rails_statusline=0
 
 " Remove highlighting search results
-map <silent> <leader>nh :nohls <CR>
+nnoremap <leader><space> :noh <CR>
 
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
