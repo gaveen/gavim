@@ -15,6 +15,9 @@ set incsearch           " find while typing
 set t_Co=256            " terminal uses 256 colors
 set modelines=0         " for better security
 
+" Map w!! to write file with sudo, when forgot to open with sudo.
+cmap w!! w !sudo tee % >/dev/null
+
 " Settings for Pathogen
 filetype off            " Disabling before Pathogen. Loaded later.
 call pathogen#runtime_append_all_bundles()
