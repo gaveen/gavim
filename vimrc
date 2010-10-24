@@ -9,12 +9,14 @@ set viminfo='20,\"50    " read/write a .viminfo file, don't store more
 set history=50          " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
 set number              " show line numbers
-set smarttab            " smart tabulatin and backspace
+set smarttab            " smart tabulation and backspace
 set title               " show title
 set incsearch           " find while typing
 set t_Co=256            " terminal uses 256 colors
 set modelines=0         " for better security
 "set relativenumber      " set line numbering to relative (Only >= Vim 7.3)
+set ignorecase          " case insensitive patterns
+set smartcase           " case insensitive patterns - when only lowercase is used
 
 
 " Map w!! to write file with sudo, when forgot to open with sudo.
