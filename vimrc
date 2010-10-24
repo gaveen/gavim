@@ -24,6 +24,11 @@ set wildmode=longest:full   " sets wildmode, also invokes wildmenu (if enabled)
 " Map w!! to write file with sudo, when forgot to open with sudo.
 cmap w!! w !sudo tee % >/dev/null
 
+" Map F1 to Esc. Safe to remove if not desireble.
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
 " Settings for Pathogen
 filetype off            " Disabling before Pathogen. Loaded later.
 call pathogen#runtime_append_all_bundles()
