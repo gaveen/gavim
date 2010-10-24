@@ -17,6 +17,7 @@ set modelines=0         " for better security
 "set relativenumber      " set line numbering to relative (Only >= Vim 7.3)
 set ignorecase          " case insensitive patterns
 set smartcase           " case insensitive patterns - when only lowercase is used
+set pastetoggle=<F2>    " F2 toggles indenting when pasting
 set wildmenu            " make comman-line completion bash like + menu
 set wildmode=longest:full   " sets wildmode, also invokes wildmenu (if enabled)
 
