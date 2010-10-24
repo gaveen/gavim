@@ -13,6 +13,7 @@ set smarttab            " smart tabulatin and backspace
 set title               " show title
 set incsearch           " find while typing
 set t_Co=256            " terminal uses 256 colors
+set modelines=0         " for better security
 
 " Settings for Pathogen
 filetype off            " Disabling before Pathogen. Loaded later.
