@@ -14,12 +14,12 @@ set title                   " show title
 set incsearch               " find while typing
 set t_Co=256                " terminal uses 256 colors
 set modelines=0             " for better security
-set relativenumber          " set line numbering to relative (Only >= Vim 7.3)
 set ignorecase              " case insensitive patterns
 set smartcase               " case insensitive patterns - when only lowercase is used
 set pastetoggle=<F2>        " F2 toggles indenting when pasting
 set wildmenu                " make command-line completion bash like + menu
 set wildmode=longest:full   " sets wildmode, also invokes wildmenu (if enabled)
+"set relativenumber          " set line numbering to relative (Only >= Vim 7.3)
 
 
 " Map w!! to write file with sudo, when forgot to open with sudo.
