@@ -2,30 +2,30 @@ if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=ucs-bom,utf-8,latin1
 endif
 
-set nocompatible        " Use Vim defaults (much better!)
-set bs=indent,eol,start " allow backspacing over everything in insert mode
-set viminfo='20,\"50    " read/write a .viminfo file, don't store more
-                        " than 50 lines of registers
-set history=50          " keep 50 lines of command line history
-set ruler               " show the cursor position all the time
-set number              " show line numbers
-set smarttab            " smart tabulation and backspace
-set title               " show title
-set incsearch           " find while typing
-set t_Co=256            " terminal uses 256 colors
-set modelines=0         " for better security
-"set relativenumber      " set line numbering to relative (Only >= Vim 7.3)
-set ignorecase          " case insensitive patterns
-set smartcase           " case insensitive patterns - when only lowercase is used
-set pastetoggle=<F2>    " F2 toggles indenting when pasting
-set wildmenu            " make comman-line completion bash like + menu
+set nocompatible            " Use Vim defaults (much better!)
+set bs=indent,eol,start     " allow backspacing over everything in insert mode
+set viminfo='20,\"50        " read/write a .viminfo file, don't store more
+                            " than 50 lines of registers
+set history=50              " keep 50 lines of command line history
+set ruler                   " show the cursor position all the time
+set number                  " show line numbers
+set smarttab                " smart tabulation and backspace
+set title                   " show title
+set incsearch               " find while typing
+set t_Co=256                " terminal uses 256 colors
+set modelines=0             " for better security
+set relativenumber          " set line numbering to relative (Only >= Vim 7.3)
+set ignorecase              " case insensitive patterns
+set smartcase               " case insensitive patterns - when only lowercase is used
+set pastetoggle=<F2>        " F2 toggles indenting when pasting
+set wildmenu                " make command-line completion bash like + menu
 set wildmode=longest:full   " sets wildmode, also invokes wildmenu (if enabled)
 
 
 " Map w!! to write file with sudo, when forgot to open with sudo.
 cmap w!! w !sudo tee % >/dev/null
 
-" Map F1 to Esc. Safe to remove if not desireble.
+" Map F1 to Esc. Safe to remove if not desirable.
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
@@ -146,8 +146,9 @@ let vala_comment_strings = 1
 let vala_space_errors = 1
 let vala_no_tab_space_error = 1
 
-" Settings for ack.vim; comment if ack --version =< 1.92
-let g:ackprg="ack -H --nocolor --nogroup"
+" Settings for ack.vim; uncomment suitable line if necessary
+"let g:ackprg="ack -H --nocolor --nogroup"         " if ack --version < 1.92
+"let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
 
 " Set the key to launch conque - terminal
 nnoremap <leader>t :ConqueTermSplit bash<cr>

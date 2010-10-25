@@ -95,4 +95,4 @@ Thanks go to many many Vim users for sharing the plugins, snippets, syntax,
 etc. files and also for making their Vim configuration public so that others
 could learn from them.
 
-Free vim tip: <Ctrl-r>+ in insert mode will paste from the OS clipboard.
+Free vim tip: <CTRL-r>+ in insert mode will paste from the OS clipboard.
