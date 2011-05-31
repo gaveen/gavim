@@ -146,6 +146,10 @@ let vala_comment_strings = 1
 let vala_space_errors = 1
 let vala_no_tab_space_error = 1
 
+au BufRead,BufNewFile *.json setfiletype javascript     " for JSON
+au BufRead,BufNewFile Vagrantfile setfiletype ruby      " for Vagrant
+"au BufRead,BufNewFile *.template setfiletype javascript " for AWS CloudFormation
+
 " Settings for ack.vim; uncomment suitable line if necessary
 "let g:ackprg="ack -H --nocolor --nogroup"         " if ack --version < 1.92
 "let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
