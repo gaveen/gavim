@@ -27,7 +27,8 @@ How to update (on Linux)
 If you want to update to the latest from my repository.
 1. Change into the cloned repos directory (i.e., use 'cd' command)
 2. $ git pull
-3. Delete the directory ./vim/bundle/snipmate/snippets if it exists
+3. $ git submodule update
+4. Delete the directory ./vim/bundle/snipmate/snippets if it exists
 
 Note: This repo might not always have the latest versions of the
 plugins. I will update them from time to time. But you still can
