@@ -24,9 +24,19 @@ How to install (on Linux)
 
 How to update (on Linux)
 ------------------------
+If you want to update to the latest from my repository.
 1. Change into the cloned repos directory (i.e., use 'cd' command)
 2. $ git pull
-3. $ git submodule update
+3. Delete the directory ./vim/bundle/snipmate/snippets if it exists
+
+Note: This repo might not always have the latest versions of the
+plugins. I will update them from time to time. But you still can
+update some of the bundles to the latest code (i.e., bundles added
+as git submodules).
+I.   Change into the cloned repos directory (i.e., use 'cd' command)
+II.  $ git submodule foreach git checkout master
+III. $ git submodule foreach git pull
+IV.  Delete the directory ./vim/bundle/snipmate/snippets if it exists
 
 I'm too lazy to write a script for the above tasks. May be later.
 
