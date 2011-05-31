@@ -52,7 +52,7 @@ My Vim configuration assumes the following programs are installed in your
 system and are ready to be used.
   # ack - the better grep (if you plan to use :Ack)
 	(Debian/Ubuntu people need ack-grep package and also to set the proper
-	 value in vimrc. Eg: let g:ackprg="ack-grep -H --nocolor --nogroup" )
+	 value in vimrc. Eg: uncomment necessary line in vimrc )
   # python - if you plan to use the Conque Terminal i.e., <leader>t
   # vim-latex - Vim LaTeX Suite plugin http://vim-latex.sourceforge.net/
 	if you plan to do a lot of LaTeX/TeX work, this is simply great. The
