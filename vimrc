@@ -59,7 +59,7 @@ if has("autocmd")
   " Enable formatting based on file types
   augroup myfiletypes
     autocmd!
-    autocmd FileType ruby,eruby,yaml,cucumber,vim,lua,latex,tex set autoindent shiftwidth=2 softtabstop=2 expandtab
+    autocmd FileType ruby,eruby,yaml,cucumber,vim,lua,latex,tex,puppet set autoindent shiftwidth=2 softtabstop=2 expandtab
     autocmd BufRead *.mkd,*.markdown  set ai formatoptions=tcroqn2 comments=n:>
   augroup END 
 endif
