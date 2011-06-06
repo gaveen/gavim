@@ -22,3 +22,6 @@
 [submodule "vim/snippets"]
 	path = vim/snippets
 	url = git://github.com/scrooloose/snipmate-snippets.git
+[submodule "vim/bundle/colors-solarized"]
+	path = vim/bundle/colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
