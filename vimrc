@@ -61,7 +61,7 @@ if has("autocmd")
     autocmd!
     autocmd FileType ruby,eruby,yaml,cucumber,vim,lua,latex,tex,puppet set autoindent shiftwidth=2 softtabstop=2 expandtab
     autocmd BufRead *.mkd,*.markdown  set ai formatoptions=tcroqn2 comments=n:>
-  augroup END 
+  augroup END
 endif
 
 if has("cscope") && filereadable("/usr/bin/cscope")
