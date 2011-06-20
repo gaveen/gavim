@@ -95,6 +95,9 @@ let &guicursor = &guicursor . ",a:blinkon0"
 " Set the leader key
 let mapleader = ","
 
+" Set easier keys to invoke BufExplorer
+nnoremap <leader>bb :BufExplorer<cr>
+
 " Set the key to toggle NERDTree
 nnoremap <leader>d :NERDTreeToggle<cr>
 
