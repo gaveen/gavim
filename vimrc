@@ -71,10 +71,8 @@ if has("autocmd")
     " Switch to working directory of the open file
     autocmd BufEnter * lcd %:p:h
 
-    " Custom filetypes settings: Python, Markdown, JSON, Vagrant,
-    " and, AWS CloudFormation templates (commented)
+    " Custom filetypes settings: Python, JSON, Vagrant, CloudFormation
     au FileType python set tabstop=4 shiftwidth=4 softtabstop=4
-    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set ai formatoptions=tcroqn2 comments=n:>
     au BufRead,BufNewFile *.json setfiletype javascript
     au BufRead,BufNewFile Vagrantfile setfiletype ruby
     "au BufRead,BufNewFile *.template setfiletype javascript
