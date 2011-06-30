@@ -2,43 +2,54 @@ if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=ucs-bom,utf-8,latin1
 endif
 
-set nocompatible            " Use Vim defaults (much better!)
-set bs=indent,eol,start     " allow backspacing over everything in insert mode
-set viminfo='20,\"50        " read/write a .viminfo file, don't store more
-                            " than 50 lines of registers
-set history=50              " keep 50 lines of command line history
-set ruler                   " show the cursor position all the time
-set number                  " show line numbers
-set smarttab                " smart tabulation and backspace
-set title                   " show title
-set incsearch               " find while typing
-set t_Co=256                " terminal uses 256 colors
-set modelines=0             " for better security
-set ignorecase              " case insensitive patterns
-set smartcase               " case insensitive patterns - when only lowercase is used
-set pastetoggle=<F2>        " F2 toggles indenting when pasting
-set wildmenu                " make command-line completion bash like + menu
-set wildmode=longest:full   " sets wildmode, also invokes wildmenu (if enabled)
-"set relativenumber          " set line numbering to relative (Only >= Vim 7.3)
+" Settings for Pathogen
+filetype off                          " disable filetype use. Enabled later
+call pathogen#runtime_append_all_bundles()
 
+set nocompatible                      " don't try to be strictly vi-like
+set modelines=0                       " don't use modelines (for security)
+set bs=indent,eol,start               " allow backspacing over everything
+set viminfo='20,\"50                  " use a viminfo file,...
+set history=50                        " limit history: 50 lines
+set ruler                             " show the cursor position
+set smarttab                          " smart tabulation and backspace
+set title                             " show title
+set incsearch                         " find as entering pattern
+set t_Co=256                          " uses 256 colors
+set ignorecase                        " case insensitive patterns,...
+set smartcase                         " when only lowercase is used
+set pastetoggle=<F2>                  " F2 toggles indenting when pasting
+set wildmenu                          " use command-line completion menu,...
+set wildmode=longest:full             " with wildmode
+set list                              " show non-print characters,...
+set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spaces
+set number                            " show line numbers OR,...
+"set relativenumber                    " relative line numbers (>= Vim 7.3)
 
-" Map w!! to write file with sudo, when forgot to open with sudo.
-cmap w!! w !sudo tee % >/dev/null
+filetype plugin indent on             " enable filetype use
 
-" Map F1 to Esc. Safe to remove if not desirable.
+setlocal foldmethod=syntax            " folding uses syntax for folding
+setlocal nofoldenable                 " don't start with folded lines
+
+" Set the leader key
+let mapleader = ","
+
+" Map F1 key to Esc.
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-" Settings for Pathogen
-filetype off            " Disabling before Pathogen. Loaded later.
-call pathogen#runtime_append_all_bundles()
+" Set the keys to turn spell checking on/off
+map <F8> <Esc>:setlocal spell spelllang=en_us<CR>
+map <F9> <Esc>:setlocal nospell<CR>
 
-" Display a place holder character for tabs and trailing spaces
-set list
-set listchars=trail:⋅,nbsp:⋅,tab:▷⋅
+" Remove highlighting search results
+nnoremap <leader><space> :noh <CR>
 
-" Only do this part when compiled with support for autocommands
+" Map w!! to write file with sudo, when forgot to open with sudo.
+cmap w!! w !sudo tee % >/dev/null
+
+" Only do this part if compiled with support for autocommands
 if has("autocmd")
   augroup fedora
     autocmd!
@@ -64,6 +75,11 @@ if has("autocmd")
   augroup END
 endif
 
+" Custom filetypes
+au BufRead,BufNewFile *.json setfiletype javascript     " for JSON
+au BufRead,BufNewFile Vagrantfile setfiletype ruby      " for Vagrant
+"au BufRead,BufNewFile *.template setfiletype javascript " for AWS CloudFormation
+
 if has("cscope") && filereadable("/usr/bin/cscope")
    set csprg=/usr/bin/cscope
    set csto=0
@@ -86,30 +102,20 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-filetype plugin indent on
-
-" Don't wake up system with blinking cursor:
-" http://www.linuxpowertop.org/known.php
+" No blinking cursor. See http://www.linuxpowertop.org/known.php
 let &guicursor = &guicursor . ",a:blinkon0"
 
-" Set the leader key
-let mapleader = ","
-
-" Set easier keys to invoke BufExplorer
+" Plugin: BufExplorer - easier invoke keys
 nnoremap <leader>bb :BufExplorer<cr>
 
-" Set the key to toggle NERDTree
+" Plugin: NERDTree - keys to toggle NERDTree
 nnoremap <leader>d :NERDTreeToggle<cr>
+" Plugin: NERDTree - use colors, cursorline and return/enter key
+let NERDChristmasTree = 1
+let NERDTreeHighlightCursorline = 1
+let NERDTreeMapActivateNode='<CR>'
 
-let NERDChristmasTree = 1               " NERDTree with colors
-let NERDTreeHighlightCursorline = 1     " highlight cursorline
-let NERDTreeMapActivateNode='<CR>'      " set Enter/Return to activate a node
-
-" Set the keys to turn spell checking on/off
-map <F8> <Esc>:setlocal spell spelllang=en_us<CR>
-map <F9> <Esc>:setlocal nospell<CR>
-
-" Set keys to toggle Scratch buffer
+" Plugin: Scratch - define invoke function
 function! ToggleScratch()
   if expand('%') == g:ScratchBufferName
     quit
@@ -117,47 +123,35 @@ function! ToggleScratch()
     Sscratch
   endif
 endfunction
-
+" Plugin: Scratch - keys to toggle Scratch buffer
 map <leader>s :call ToggleScratch()<CR>
 
-" Enable code folding by syntax and disable folding by default
-setlocal foldmethod=syntax
-setlocal nofoldenable
-
-" Turn off rails related things in statusbar
+" Plugin: Rails - turn off rails related things in statusbar
 let g:rails_statusline=0
 
-" Remove highlighting search results
-nnoremap <leader><space> :noh <CR>
-
-" Snipmate setup
+" Plugin: Snipmate configuration
 source ~/.vim/snippets/support_functions.vim
 autocmd vimenter * call ExtractSnips("~/.vim/snippets/html", "eruby")
 autocmd vimenter * call ExtractSnips("~/.vim/snippets/html", "php")
 
-" Vim-LaTeX setup
+" Plugin: LaTeX - configuration (plugin not bundled in gavim2)
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
-" Vala support
+" Plugin: Vala - vala support
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala  setfiletype vala
 au BufRead,BufNewFile *.vapi  setfiletype vala
-
 let vala_comment_strings = 1
 let vala_space_errors = 1
 let vala_no_tab_space_error = 1
 
-au BufRead,BufNewFile *.json setfiletype javascript     " for JSON
-au BufRead,BufNewFile Vagrantfile setfiletype ruby      " for Vagrant
-"au BufRead,BufNewFile *.template setfiletype javascript " for AWS CloudFormation
-
-" Settings for ack.vim; uncomment suitable line if necessary
+" Plugin: Ack - uncomment suitable line if configuration is necessary
 "let g:ackprg="ack -H --nocolor --nogroup"         " if ack --version < 1.92
 "let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
 
-" Set the key to launch conque - terminal
+" Plugin: keys to launch conque - terminal
 nnoremap <leader>t :ConqueTermSplit bash<cr>
 
 " Set color scheme
