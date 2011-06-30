@@ -72,7 +72,7 @@ if has("autocmd")
     autocmd BufEnter * lcd %:p:h
 
     " Custom filetypes settings: Python, Markdown, JSON, Vagrant,
-    " and, AWS CloudFormation templates
+    " and, AWS CloudFormation templates (commented)
     au FileType python set tabstop=4 shiftwidth=4 softtabstop=4
     au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set ai formatoptions=tcroqn2 comments=n:>
     au BufRead,BufNewFile *.json setfiletype javascript
@@ -80,7 +80,6 @@ if has("autocmd")
     "au BufRead,BufNewFile *.template setfiletype javascript
   augroup END
 endif
-
 
 if has("cscope") && filereadable("/usr/bin/cscope")
    set csprg=/usr/bin/cscope
