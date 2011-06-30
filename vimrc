@@ -56,7 +56,7 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Only do this part if compiled with support for autocommands
 if has("autocmd")
-  augroup fedora
+  augroup linux
     autocmd!
     " In text files, always limit the width of text to 78 characters
     autocmd BufRead *.txt set tw=78
@@ -70,20 +70,17 @@ if has("autocmd")
 
     " Switch to working directory of the open file
     autocmd BufEnter * lcd %:p:h
-  augroup END
 
-  " Enable custom formatting based on file types
-  augroup myfiletypes
-    autocmd!
-    autocmd FileType python set autoindent shiftwidth=4 softtabstop=4 expandtab
-    autocmd BufRead *.mkd,*.markdown set ai formatoptions=tcroqn2 comments=n:>
+    " Custom filetypes settings: Python, Markdown, JSON, Vagrant,
+    " and, AWS CloudFormation templates
+    au FileType python set tabstop=4 shiftwidth=4 softtabstop=4
+    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set ai formatoptions=tcroqn2 comments=n:>
+    au BufRead,BufNewFile *.json setfiletype javascript
+    au BufRead,BufNewFile Vagrantfile setfiletype ruby
+    "au BufRead,BufNewFile *.template setfiletype javascript
   augroup END
 endif
 
-" Additional custom filetypes
-au BufRead,BufNewFile *.json setfiletype javascript     " for JSON
-au BufRead,BufNewFile Vagrantfile setfiletype ruby      " for Vagrant
-"au BufRead,BufNewFile *.template setfiletype javascript " for AWS CloudFormation
 
 if has("cscope") && filereadable("/usr/bin/cscope")
    set csprg=/usr/bin/cscope
