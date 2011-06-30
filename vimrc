@@ -8,11 +8,9 @@ call pathogen#runtime_append_all_bundles()
 
 set nocompatible                      " don't try to be strictly vi-like
 set modelines=0                       " don't use modelines (for security)
-set bs=indent,eol,start               " allow backspacing over everything
 set viminfo='20,\"50                  " use a viminfo file,...
-set history=50                        " limit history: 50 lines
+set history=50                        " limit history
 set ruler                             " show the cursor position
-set smarttab                          " smart tabulation and backspace
 set title                             " show title
 set incsearch                         " find as entering pattern
 set t_Co=256                          " uses 256 colors
@@ -21,6 +19,13 @@ set smartcase                         " when only lowercase is used
 set pastetoggle=<F2>                  " F2 toggles indenting when pasting
 set wildmenu                          " use command-line completion menu,...
 set wildmode=longest:full             " with wildmode
+set bs=indent,eol,start               " allow backspacing over everything
+set autoindent                        " enable auto-indentation
+set tabstop=2                         " no. of spaces for tab in file
+set shiftwidth=2                      " no. of spaces for step in autoindent
+set softtabstop=2                     " no. of spaces for tab when editing
+set expandtab                         " expand tabs into spaces
+set smarttab                          " smart tabulation and backspace
 set list                              " show non-print characters,...
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spaces
 set number                            " show line numbers OR,...
@@ -67,15 +72,15 @@ if has("autocmd")
     autocmd BufEnter * lcd %:p:h
   augroup END
 
-  " Enable formatting based on file types
+  " Enable custom formatting based on file types
   augroup myfiletypes
     autocmd!
-    autocmd FileType ruby,eruby,yaml,cucumber,vim,lua,latex,tex,puppet set autoindent shiftwidth=2 softtabstop=2 expandtab
-    autocmd BufRead *.mkd,*.markdown  set ai formatoptions=tcroqn2 comments=n:>
+    autocmd FileType python set autoindent shiftwidth=4 softtabstop=4 expandtab
+    autocmd BufRead *.mkd,*.markdown set ai formatoptions=tcroqn2 comments=n:>
   augroup END
 endif
 
-" Custom filetypes
+" Additional custom filetypes
 au BufRead,BufNewFile *.json setfiletype javascript     " for JSON
 au BufRead,BufNewFile Vagrantfile setfiletype ruby      " for Vagrant
 "au BufRead,BufNewFile *.template setfiletype javascript " for AWS CloudFormation
