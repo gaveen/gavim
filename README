@@ -1,13 +1,8 @@
 Gavim2 - Gaveen's Vim Configuration v 2.0
 =========================================
 
-This is the Vim configuration I actually use. If you are somehow using my
-older Vim configuration from http://github.com/gaveen/gavim I suggest you
-switch to this. This version is much more organized. I won't be maintaining
-or using the old one anymore.
-
-I recommend using gvim/vim-X11/vim-gnome/etc. But it's not a must.
-
+This is the Vim configuration I actually use. I will try to keep
+this repository up-to-date.
 
 How to install (on Linux)
 -------------------------
@@ -16,10 +11,10 @@ How to install (on Linux)
 3. $ git submodule init
 4. $ git submodule update
 5. Delete the directory ./vim/bundle/snipmate/snippets
-6. Link the following
-	6.1 gvimrc as ~/.gvimrc
-	6.2 vimrc as ~/.vimrc
-	6.3 vim/ as ~/.vim
+6. Link (Eg: using ln -s) the following
+  6.1 gvimrc as ~/.gvimrc
+  6.2 vimrc as ~/.vimrc
+  6.3 vim/ as ~/.vim
 
 
 How to update (on Linux)
@@ -30,55 +25,35 @@ If you want to update to the latest from my repository.
 3. $ git submodule update
 4. Delete the directory ./vim/bundle/snipmate/snippets if it exists
 
-Note: This repo might not always have the latest versions of the
-plugins. I will update them from time to time. But you still can
-update some of the bundles to the latest code (i.e., bundles added
-as git submodules).
-I.   Change into the cloned repos directory (i.e., use 'cd' command)
-II.  $ git submodule foreach git checkout master
-III. $ git submodule foreach git pull
-IV.  Delete the directory ./vim/bundle/snipmate/snippets if it exists
-
 I'm too lazy to write a script for the above tasks. May be later.
-
-
-Since I work most of the time in an up to date Fedora (Linux) system, I took
-the liberty of taking some parts of my .vimrc directly from the very decent
-default Vim configuration found in a Fedora (10) system. The rest I filled,
-tuned and tweaked until it felt right.
-
-Most of the plugins are added as git submodules (which aren't have a version
-number in the bundle name) and all of the plugins are kept separately as
-bundles by using Tim Pope's awesome vim-pathogen plugin.
-
-Since I removed a lot of cruft from the original version of gavim, added a
-couple of neat things and tuned some more, there's bound to be more
-dependencies. On the plus side this version is much much more convenient to
-setup and use for stuff I do.
 
 
 Dependencies
 ------------
-My Vim configuration assumes the following programs are installed in your
-system and are ready to be used.
-  # ack - the better grep (if you plan to use :Ack)
-	(Debian/Ubuntu people need ack-grep package and also to set the proper
-	 value in vimrc. Eg: uncomment necessary line in vimrc )
+Having the following programs installed & ready to use should ensure
+a smooth experience. Lack of them would *not* break vim though. I am
+listing their purpose here so that you may opt not to use them.
+
+  # vim and/or gvim - at least try to use version 7.2 or above.
+      version 7.3 compiled with +ruby to use relativenumber
+    Package: Fedora family => vim-enhanced / vim-X11,
+             Debian family => vim (not default) / vim-gnome
+  # git - to clone and update this repository and submodules
+    Package: Fedora family => git, Debian family => git-core
+  # ack - a better grep alternative if you plan to use :Ack
+    Package: Fedora family => ack, Debian family => ack-grep
+      if you use a Debian family OS, uncomment necessary line in vimrc
   # python - if you plan to use the Conque Terminal i.e., <leader>t
-  # vim-latex - Vim LaTeX Suite plugin http://vim-latex.sourceforge.net/
-	if you plan to do a lot of LaTeX/TeX work, this is simply great. The
-	configuration is already done in vimrc.
-  # git - and finally if you want to grab and use my vimfiles and update it
-	you will need git.
-  # vim version at least 7.3 compiled with +ruby if you want to use relative
-	line numbering (i.e., set relativenumber)
+    Package: Fedora family => python, Debian family => python
+  # vim-latex - Vim LaTeX Suite plugin to use vim as a LaTeX/TeX IDE
+    Package: Fedora family => vim-latex, Debian family => vim-latexsuite
 
 
 Plugins
 -------
 These are the plugins I've included in this set of files.
   - ack.vim (pattern matching) - :Ack pattern optional_path
-  - bufexploreer (buffer explorer) - <leader>be or <leader>bb
+  - bufexploreer (buffer explorer) - <leader>bb
   - conque (embedded terminal) - <leader>t
   - matchit (pair matching)
   - nerdcommenter (commenting) - <leader>c<space>
@@ -93,17 +68,5 @@ These are the plugins I've included in this set of files.
 
 
 Vim 7.2 (or higher) already have some great additional features like spell
-checking, word completion, code folding, etc. I'm only interested in
-maintaining this configuration for the Vim version I'm using, which happened
-to be 7.2 as of this writing.
-
-A few colorchemes are also included. Some of them were directly taken from the
-default vim installation in Fedora. To get the best view of the color schemes
-t_Co=256 is set by default in the .vimrc file.
-
-
-Thanks go to many many Vim users for sharing the plugins, snippets, syntax,
-etc. files and also for making their Vim configuration public so that others
-could learn from them.
-
-Free vim tip: <CTRL-r>+ in insert mode will paste from the OS clipboard.
+checking, word completion, code folding, etc. A load colorchemes are also
+included (both light and dark themes) to choose from.
