@@ -34,6 +34,7 @@ set number                            " show line numbers OR,...
 
 filetype plugin indent on             " enable filetype use
 
+setlocal ofu=syntaxcomplete#Complete  " enable syntax based omni completion
 setlocal foldmethod=syntax            " folding uses syntax for folding
 setlocal nofoldenable                 " don't start with folded lines
 
