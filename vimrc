@@ -106,6 +106,18 @@ endif
 " No blinking cursor. See http://www.linuxpowertop.org/known.php
 let &guicursor = &guicursor . ",a:blinkon0"
 
+" View changes after the last save
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
+
+nnoremap <leader>? :DiffSaved<cr>
+
 " Plugin: BufExplorer - easier invoke keys
 nnoremap <leader>bb :BufExplorer<cr>
 
