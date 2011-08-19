@@ -73,8 +73,9 @@ if has("autocmd")
     " Switch to working directory of the open file
     autocmd BufEnter * lcd %:p:h
 
-    " Custom filetypes settings: Python, Shell, JSON, Vagrant
+    " Custom filetypes settings: Python, Shell, Go, JSON, Vagrant
     au FileType python,sh set tabstop=4 shiftwidth=4 softtabstop=4
+    au FileType go set noexpandtab tabstop=8 shiftwidth=8 softtabstop=8
     au BufRead,BufNewFile *.json setfiletype javascript
     au BufRead,BufNewFile Vagrantfile setfiletype ruby
   augroup END
