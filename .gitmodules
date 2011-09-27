@@ -25,3 +25,6 @@
 [submodule "vim/bundle/colors-solarized"]
 	path = vim/bundle/colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/vim-ruby-refactoring"]
+	path = vim/bundle/vim-ruby-refactoring
+	url = git://github.com/ecomba/vim-ruby-refactoring.git
