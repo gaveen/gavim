@@ -58,6 +58,7 @@ These are the plugins I've included in this set of files.
   - scratch (temporary buffer) - <leader>s
   - snipmate (snippets)
   - rails (for Ruby on Rails)
+  - ruby-refactoring (for Ruby)
   - vcscommand (generic VCS frontend)
   - fugitive (Git wrapper)
   - guicolorscheme (use GUI colorchemes in console)
