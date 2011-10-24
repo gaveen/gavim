@@ -1,11 +1,11 @@
 " FILE:     syntax/conque_term.vim {{{
 " AUTHOR:   Nico Raffo <nicoraffo@gmail.com>
 " WEBSITE:  http://conque.googlecode.com
-" MODIFIED: 2011-08-12
-" VERSION:  2.2, for Vim 7.0
+" MODIFIED: 2011-09-02
+" VERSION:  2.3, for Vim 7.0
 " LICENSE:
 " Conque - Vim terminal/console emulator
-" Copyright (C) 2009-__YEAR__ Nico Raffo 
+" Copyright (C) 2009-2011 Nico Raffo 
 "
 " MIT License
 " 

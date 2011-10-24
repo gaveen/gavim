@@ -1,11 +1,11 @@
 # FILE:     autoload/conque_term/conque.py 
 # AUTHOR:   Nico Raffo <nicoraffo@gmail.com>
 # WEBSITE:  http://conque.googlecode.com
-# MODIFIED: 2011-08-12
-# VERSION:  2.2, for Vim 7.0
+# MODIFIED: 2011-09-02
+# VERSION:  2.3, for Vim 7.0
 # LICENSE:
 # Conque - Vim terminal/console emulator
-# Copyright (C) 2009-__YEAR__ Nico Raffo
+# Copyright (C) 2009-2011 Nico Raffo
 #
 # MIT License
 #
@@ -48,7 +48,7 @@ Usage:
 import vim
 import re
 import math
-import time # DEBUG
+
 
 class Conque:
 
@@ -161,10 +161,6 @@ class Conque:
         read -- Check program for new output when finished
 
         """
-        # check if window size has changed
-        if read:
-            self.update_window_size()
-
         # write and read
         self.proc.write(input)
 
@@ -339,10 +335,6 @@ class Conque:
             # we need to set the cursor position
             self.cursor_set = False
 
-            # redraw screen for immediate feedback
-            #if not CONQUE_FAST_MODE:
-            #    vim.command('redraw')
-
         except:
 
 
@@ -403,6 +395,11 @@ class Conque:
         if self.cursor_set:
             return
 
+        # check if window size has changed
+        if not CONQUE_FAST_MODE:
+            self.update_window_size()
+
+
         # otherwise set cursor position
         try:
             self.set_cursor(self.l, self.c)
@@ -410,6 +407,7 @@ class Conque:
 
 
             pass
+
         self.cursor_set = True
 
 
