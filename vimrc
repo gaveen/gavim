@@ -152,10 +152,8 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 " Plugin: Vala - vala support
-autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-au BufRead,BufNewFile *.vala  setfiletype vala
-au BufRead,BufNewFile *.vapi  setfiletype vala
+autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
 let vala_comment_strings = 1
 let vala_space_errors = 1
 let vala_no_tab_space_error = 1
