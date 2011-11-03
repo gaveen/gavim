@@ -13,9 +13,8 @@ How to install (on Linux)
 3. Delete conflicting snippets by running:
    $ rm -rf ./vim/bundle/snipmate/snippets
 4. Link (Eg: using ln -s) the following files:
-  4.1 gvimrc as ~/.gvimrc
+  4.1 vim/ as ~/.vim
   4.2 vimrc as ~/.vimrc
-  4.3 vim/ as ~/.vim
 
 
 How to update (on Linux)
@@ -31,7 +30,6 @@ experience. Lack of them would *not* break vim though. You can
 pick what you want to use.
 
   # vim and/or gvim - at least try to use version 7.2 or above.
-      version 7.3 compiled with +ruby to use relativenumber
     Package: Fedora family => vim-enhanced / vim-X11,
              Debian family => vim (not default) / vim-gnome
   # git - to clone and update this repository and submodules
