@@ -19,7 +19,7 @@ if exists("syntax-on")
 syntax reset
 endif
 
-let colors_name = "tango2"
+let colors_name = "tango-ps"
 
 " =============================================================================
 " Vim >= 7.0 specific colours

@@ -1,6 +1,6 @@
 " Vim color scheme
 "
-" Name:         railscasts.vim
+" Name:         railscasts-nm.vim
 " Maintainer:   Nick Moffitt <nick@zork.net>
 " Last Change:  01 Mar 2008
 " License:      WTFPL <http://sam.zoy.org/wtfpl/>
@@ -12,8 +12,8 @@
 " up some of the funny behaviors for editing e-mails and such.
 "
 " To use for gvim:
-" 1: install this file as ~/.vim/colors/railscasts.vim
-" 2: put "colorscheme railscasts" in your .gvimrc
+" 1: install this file as ~/.vim/colors/railscasts-nm.vim
+" 2: put "colorscheme railscasts-nm" in your .gvimrc
 "
 " If you are using Ubuntu, you can get the benefit of this in your
 " terminals using ordinary vim by taking the following steps:
@@ -22,7 +22,7 @@
 " 2: put the following in your .vimrc
 "     if $COLORTERM == 'gnome-terminal'
 "         set term=gnome-256color
-"         colorscheme railscasts
+"         colorscheme railscasts-nm
 "     else
 "         colorscheme default
 "     endif
@@ -38,7 +38,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "railscasts_alt"
+let g:colors_name = "railscasts-nm"
 
 hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName

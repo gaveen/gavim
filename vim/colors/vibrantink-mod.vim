@@ -1,5 +1,5 @@
 " Vim color file
-" Converted from Textmate theme Vibrant Ink using Coloration v0.2.2 (http://github.com/sickill/coloration)
+" Converted from Textmate theme Vibrant Ink using Coloration v0.2.4 (http://github.com/sickill/coloration)
 
 set background=dark
 highlight clear
@@ -8,7 +8,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "Vibrant Ink"
+let g:colors_name = "vibrantink-mod"
 
 hi Cursor  guifg=NONE guibg=#ffffff gui=NONE
 hi Visual  guifg=NONE guibg=#2e4034 gui=NONE

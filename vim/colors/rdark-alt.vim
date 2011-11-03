@@ -8,7 +8,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "RDark"
+let g:colors_name = "rdark-alt"
 
 hi Cursor  guifg=NONE guibg=#ffffff gui=NONE
 hi Visual  guifg=NONE guibg=#6a727d gui=NONE
