@@ -1,0 +1,27 @@
+[submodule "vim/bundle/plugin-ack"]
+	path = vim/bundle/plugin-ack
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/plugin-nerdcommenter"]
+	path = vim/bundle/plugin-nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/plugin-nerdtree"]
+	path = vim/bundle/plugin-nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/plugin-snipmate"]
+	path = vim/bundle/plugin-snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/plugin-rails"]
+	path = vim/bundle/plugin-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/plugin-fugitive"]
+	path = vim/bundle/plugin-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/color-solarized"]
+	path = vim/bundle/color-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/plugin-ruby_refactoring"]
+	path = vim/bundle/plugin-ruby_refactoring
+	url = git://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "vim/snippets"]
+	path = vim/snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
