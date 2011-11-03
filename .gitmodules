@@ -28,3 +28,6 @@
 [submodule "vim/bundle/plugin-csapprox"]
 	path = vim/bundle/plugin-csapprox
 	url = git://github.com/godlygeek/csapprox.git
+[submodule "vim/bundle/color-railscasts"]
+	path = vim/bundle/color-railscasts
+	url = git://github.com/jpo/vim-railscasts-theme.git
