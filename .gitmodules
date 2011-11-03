@@ -31,3 +31,6 @@
 [submodule "vim/bundle/color-railscasts"]
 	path = vim/bundle/color-railscasts
 	url = git://github.com/jpo/vim-railscasts-theme.git
+[submodule "vim/bundle/plugin-gitv"]
+	path = vim/bundle/plugin-gitv
+	url = git://github.com/gregsexton/gitv.git
