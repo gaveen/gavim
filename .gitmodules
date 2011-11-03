@@ -25,3 +25,6 @@
 [submodule "vim/snippets"]
 	path = vim/snippets
 	url = git://github.com/scrooloose/snipmate-snippets.git
+[submodule "vim/bundle/plugin-csapprox"]
+	path = vim/bundle/plugin-csapprox
+	url = git://github.com/godlygeek/csapprox.git
