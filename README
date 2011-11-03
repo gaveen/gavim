@@ -1,5 +1,5 @@
-Gavim2 - Gaveen's Vim Configuration v 2.0
-=========================================
+Gavim2 - Gaveen's Vim Configuration
+===================================
 
 This is the Vim configuration I actually use. It should be usable
 in any decent Linux system.
@@ -46,20 +46,21 @@ pick what you want to use.
 Plugins
 -------
 These are the plugins I've included in this set of files.
-  - ack.vim (pattern matching) - :Ack pattern optional_path
+  - ack (pattern matching) - :Ack pattern optional_path
   - bufexploreer (buffer explorer) - <leader>bb
   - conque (embedded terminal) - <leader>t
-  - matchit (pair matching)
+  - csapprox (use GUI colorchemes in terminal)
+  - fugitive (Git wrapper)
+  - gitv (gitk/gitg-like git commit viewer for fugitive)
+  - matchit (pair matching) - %
   - nerdcommenter (commenting) - <leader>c<space>
   - nerdtree (file browser) - <leader>d
   - pathogen (plugin bundle handling)
-  - scratch (temporary buffer) - <leader>s
-  - snipmate (snippets)
   - rails (for Ruby on Rails)
   - ruby-refactoring (for Ruby)
+  - scratch (temporary buffer) - <leader>s
+  - snipmate (snippets)
   - vcscommand (generic VCS frontend)
-  - fugitive (Git wrapper)
-  - guicolorscheme (use GUI colorchemes in console)
 
 
 Newer Vim setups already have some great features like spell checking,
