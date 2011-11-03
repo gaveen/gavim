@@ -30,7 +30,12 @@ set mouse=a                           " enable mouse in all modes
 set list                              " show non-print characters,...
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spaces
 set number                            " show line numbers OR,...
-"set relativenumber                    " relative line numbers (>= Vim 7.3)
+set columns=80                        " characters per line = 80
+
+set guioptions-=T                     " no toolbar in gvim
+set guioptions-=r                     " no right scrollbar in gvim
+set guioptions-=L                     " no left scrollbar when v.split in gvim
+set guifont=DejaVu\ Sans\ Mono\ 11    " set font in gvim
 
 filetype plugin indent on             " enable filetype use
 
