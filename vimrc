@@ -169,4 +169,4 @@ let vala_no_tab_space_error = 1
 nnoremap <leader>t :ConqueTermSplit bash<cr>
 
 " Set color scheme
-colorscheme railscasts-nm
+colorscheme monokai
