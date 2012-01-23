@@ -35,7 +35,7 @@ set columns=80                        " characters per line = 80
 set guioptions-=T                     " no toolbar in gvim
 set guioptions-=r                     " no right scrollbar in gvim
 set guioptions-=L                     " no left scrollbar when v.split in gvim
-set guifont=DejaVu\ Sans\ Mono\ 11    " set font in gvim
+set guifont=DejaVu\ Sans\ Mono\ 10    " set font in gvim
 
 filetype plugin indent on             " enable filetype use
 
