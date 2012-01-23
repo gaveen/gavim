@@ -168,5 +168,8 @@ let vala_no_tab_space_error = 1
 " Plugin: keys to launch conque - terminal
 nnoremap <leader>t :ConqueTermSplit bash<cr>
 
-" Set color scheme
+" Set color scheme and shortcut keys
+map <F5> <Esc>:colorscheme railscasts-nm<CR>
+map <F6> <Esc>:colorscheme monokai<CR>
+
 colorscheme monokai
