@@ -145,7 +145,7 @@ map <leader>s :call ToggleScratch()<CR>
 " Plugin: Rails - turn off rails related things in statusbar
 let g:rails_statusline=0
 
-" Plugin: Snipmate configuration
+" Plugin: Snipmate - configuration
 source ~/.vim/snippets/support_functions.vim
 autocmd vimenter * call ExtractSnips("~/.vim/snippets/html", "eruby")
 autocmd vimenter * call ExtractSnips("~/.vim/snippets/html", "php")
@@ -153,6 +153,9 @@ autocmd vimenter * call ExtractSnips("~/.vim/snippets/html", "php")
 " Plugin: LaTeX - configuration (plugin not bundled in gavim2)
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+
+" Plugin: Pandoc - no folding by default
+let g:pandoc_no_folding = 1
 
 " Plugin: Vala - vala support
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
@@ -164,9 +167,6 @@ let vala_no_tab_space_error = 1
 " Plugin: Ack - uncomment suitable line if configuration is necessary
 "let g:ackprg="ack -H --nocolor --nogroup"         " if ack --version < 1.92
 "let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
-
-" Plugin: Pandoc
-let g:pandoc_no_folding = 1                       " no folding by default
 
 " Plugin: keys to launch conque - terminal
 nnoremap <leader>t :ConqueTermSplit bash<cr>
