@@ -165,6 +165,9 @@ let vala_no_tab_space_error = 1
 "let g:ackprg="ack -H --nocolor --nogroup"         " if ack --version < 1.92
 "let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
 
+" Plugin: Pandoc
+let g:pandoc_no_folding = 1                       " no folding by default
+
 " Plugin: keys to launch conque - terminal
 nnoremap <leader>t :ConqueTermSplit bash<cr>
 

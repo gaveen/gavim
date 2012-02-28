@@ -55,6 +55,7 @@ These are the plugins I've included in this set of files.
   - matchit (pair matching) - %
   - nerdcommenter (commenting) - <leader>c<space>
   - nerdtree (file browser) - <leader>d
+  - pandoc (nice pandoc editing experience)
   - pathogen (plugin bundle handling)
   - rails (for Ruby on Rails)
   - ruby-refactoring (for Ruby)
