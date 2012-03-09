@@ -40,3 +40,6 @@
 [submodule "vim/bundle/plugin-auto_pairs"]
 	path = vim/bundle/plugin-auto_pairs
 	url = git://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/bundle/plugin-surround"]
+	path = vim/bundle/plugin-surround
+	url = git://github.com/tpope/vim-surround.git

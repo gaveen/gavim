@@ -62,6 +62,7 @@ These are the plugins I've included in this set of files.
   - ruby-refactoring (for Ruby)
   - scratch (temporary buffer) - <leader>s
   - snipmate (snippets)
+  - surround (easy working with matching pairs)
   - vcscommand (generic VCS frontend)
 
 
