@@ -47,6 +47,7 @@ Plugins
 -------
 These are the plugins I've included in this set of files.
   - ack (pattern matching) - :Ack pattern optional_path
+  - auto-pairs (auto-complete matching pairs) - <F3> to toggle
   - bufexploreer (buffer explorer) - <leader>bb
   - conque (embedded terminal) - <leader>t
   - csapprox (use GUI colorchemes in terminal)

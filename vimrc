@@ -121,6 +121,9 @@ com! DiffSaved call s:DiffWithSaved()
 
 nnoremap <leader>? :DiffSaved<cr>
 
+" Plugin: Auto Pairs - key to toggle auto-complete
+let g:AutoPairsShortcutToggle = '<F3>'
+
 " Plugin: BufExplorer - easier invoke keys
 nnoremap <leader>bb :BufExplorer<cr>
 

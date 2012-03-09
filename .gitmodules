@@ -37,3 +37,6 @@
 [submodule "vim/bundle/plugin-pandoc"]
 	path = vim/bundle/plugin-pandoc
 	url = git://github.com/vim-pandoc/vim-pandoc.git
+[submodule "vim/bundle/plugin-auto_pairs"]
+	path = vim/bundle/plugin-auto_pairs
+	url = git://github.com/jiangmiao/auto-pairs.git
