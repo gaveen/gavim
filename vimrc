@@ -178,10 +178,5 @@ nnoremap <leader>t :ConqueTermSplit bash<cr>
 " Set color scheme and shortcut keys
 map <F5> <Esc>:colorscheme railscasts-nm<CR>
 map <F6> <Esc>:colorscheme monokai<CR>
-if has('gui_running')
-  map <F7> <Esc>:colorscheme solarized<CR>
-else
-  map <F7> <Esc>:colorscheme AllHallowsEveCustom<CR>
-endif
-
+map <F7> <Esc>:colorscheme codeburn<CR>
 colorscheme monokai
