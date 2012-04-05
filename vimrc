@@ -198,6 +198,7 @@ elseif exists('s:use_guicolorscheme')
   colorscheme dc2
   runtime! bundle/plugin-guicolorscheme-1.2/guicolorscheme.vim
   map <F5> <Esc>:GuiColorScheme railscasts-nm<CR>
+  map <F6> <Esc>:colorscheme dc2<CR>
 else
   colorscheme default
 endif
