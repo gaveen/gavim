@@ -100,11 +100,24 @@ if has("cscope") && filereadable("/usr/bin/cscope")
    set csverb
 endif
 
+" Explicitly tell vim is CSApprox capable. Uncommenting would make
+" sure CSApprox is used, provided other dependencies are fulfilled
+"let g:csa_Capable = 1
+
 " Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
+" Use CSApprox or guicolorscheme plugins based on gui support
+" Also switch on highlighting the last used search pattern
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
+  if &t_Co == 256 || &t_Co == 88
+    if has('gui') || exists("g:csa_Capable")
+      let s:use_CSApprox = 1
+    else
+      let g:CSApprox_loaded = 1
+      let s:use_guicolorscheme = 1
+    endif
+  endif
 endif
 
 " No blinking cursor. See http://www.linuxpowertop.org/known.php
@@ -176,7 +189,15 @@ let vala_no_tab_space_error = 1
 nnoremap <leader>t :ConqueTermSplit bash<cr>
 
 " Set color scheme and shortcut keys
-map <F5> <Esc>:colorscheme railscasts-nm<CR>
-map <F6> <Esc>:colorscheme monokai<CR>
-map <F7> <Esc>:colorscheme codeburn<CR>
-colorscheme monokai
+if exists('s:use_CSApprox')
+  colorscheme monokai
+  map <F5> <Esc>:colorscheme railscasts-nm<CR>
+  map <F6> <Esc>:colorscheme monokai<CR>
+  map <F7> <Esc>:colorscheme codeburn<CR>
+elseif exists('s:use_guicolorscheme')
+  colorscheme dc2
+  runtime! bundle/plugin-guicolorscheme-1.2/guicolorscheme.vim
+  map <F5> <Esc>:GuiColorScheme railscasts-nm<CR>
+else
+  colorscheme default
+endif
