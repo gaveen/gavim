@@ -53,10 +53,11 @@ These are the plugins I've included in this set of files.
   - csapprox (use GUI colorchemes in terminal)
   - fugitive (Git wrapper)
   - gitv (gitk/gitg-like git commit viewer for fugitive)
+  - guicolorscheme (CSApprox alternative) - :GuiColorScheme
   - matchit (pair matching) - %
   - nerdcommenter (commenting) - <leader>c<space>
   - nerdtree (file browser) - <leader>d
-  - pandoc (nice pandoc editing experience)
+  - pandoc (pandoc editing)
   - pathogen (plugin bundle handling)
   - rails (for Ruby on Rails)
   - ruby-refactoring (for Ruby)
@@ -70,8 +71,9 @@ Newer Vim setups already have some great features like spell checking,
 word completion, code folding, etc. A load of colorchemes are also
 included (both light and dark themes) to choose from.
 
-NOTE: railscasts-nm colorscheme works well with transparent terminals.
-
 Credit should go to everyone who brought you vim, plugins, related
 tools, documentation, provide help and more. Also a big thank you to
 official vim docs, Vim Tips Wiki and #vim channel.
+
+NOTE: uncomment line "let g:csa_Capable = 1" to explicitly say that
+your vim is CSApprox capable even if :echo has('gui') returns 0.
