@@ -4,7 +4,7 @@ endif
 
 " Settings for Pathogen
 filetype off                          " disable filetype use. Enabled later
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 set nocompatible                      " don't try to be strictly vi-like
 set modelines=0                       " don't use modelines (for security)
