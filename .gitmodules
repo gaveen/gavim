@@ -46,3 +46,6 @@
 [submodule "vim/bundle/plugin-ctrlp"]
 	path = vim/bundle/plugin-ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/plugin-go"]
+	path = vim/bundle/plugin-go
+	url = git://github.com/jnwhiteh/vim-golang.git
