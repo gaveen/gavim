@@ -5,20 +5,45 @@ This is the Vim configuration I actually use. It should be usable
 in any decent Linux system.
 
 
-How to install (on Linux)
--------------------------
+How to use
+----------
+1. Download the latest file from:
+    https://github.com/downloads/gaveen/gavim/gavim.tar.xz
+    Eg: $ wget -c is.gd/gavim_xz
+2. Extract the downloaded XZ compressed tar file: gavim.tar.xz
+    Eg: $ tar xJvf gavim.tar.xz
+3. Rename the extracted 'gavim-xxxxxxxx' to 'gavim' if already isn't
+    Eg: $ mv gavim-xxxxxxxx gavim
+4. Then you can
+  Either
+  # place "gavim" somewhere else
+    Eg: $ mv gavim ~/Apps/
+    And,
+    Link "gavim/.vim/" as "~/.vim"  and  "gavim/.vimrc" as "~/.vimrc"
+    Eg:
+        $ ln -s ~/Apps/gavim/.vim ~/.vim
+        $ ln -s ~/Apps/gavim/.vimrc ~/.vimrc
+
+  Or,
+
+  # place .vim and .vimrc directly in your home directory
+    Eg: $ cp -r gavim/* ~/
+
+
+How to install (from source)
+----------------------------
 1. Clone this repository
 2. In the cloned directory run:
    $ git submodule update --init
 3. Delete conflicting snippets by running:
-   $ rm -rf ./vim/bundle/plugin-snipmate/snippets
+   $ rm -rf ./.vim/bundle/plugin-snipmate/snippets
 4. Link (Eg: using ln -s) the following files:
-  4.1 vim/ as ~/.vim
-  4.2 vimrc as ~/.vimrc
+  I)  .vim/ as ~/.vim
+  II) .vimrc as ~/.vimrc
 
 
-How to update (on Linux)
-------------------------
+How to update (from source)
+---------------------------
 1. In the cloned directory run:
    $ git pull && git submodule update
 
