@@ -1,51 +1,51 @@
 [submodule "vim/bundle/plugin-ack"]
 	path = vim/bundle/plugin-ack
-	url = git://github.com/mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "vim/bundle/plugin-nerdcommenter"]
 	path = vim/bundle/plugin-nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/bundle/plugin-nerdtree"]
 	path = vim/bundle/plugin-nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/plugin-snipmate"]
 	path = vim/bundle/plugin-snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+	url = https://github.com/msanders/snipmate.vim.git
 [submodule "vim/bundle/plugin-rails"]
 	path = vim/bundle/plugin-rails
-	url = git://github.com/tpope/vim-rails.git
+	url = https://github.com/tpope/vim-rails.git
 [submodule "vim/bundle/plugin-fugitive"]
 	path = vim/bundle/plugin-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/color-solarized"]
 	path = vim/bundle/color-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/plugin-ruby_refactoring"]
 	path = vim/bundle/plugin-ruby_refactoring
-	url = git://github.com/ecomba/vim-ruby-refactoring.git
+	url = https://github.com/ecomba/vim-ruby-refactoring.git
 [submodule "vim/snippets"]
 	path = vim/snippets
-	url = git://github.com/scrooloose/snipmate-snippets.git
+	url = https://github.com/scrooloose/snipmate-snippets.git
 [submodule "vim/bundle/plugin-csapprox"]
 	path = vim/bundle/plugin-csapprox
-	url = git://github.com/godlygeek/csapprox.git
+	url = https://github.com/godlygeek/csapprox.git
 [submodule "vim/bundle/color-railscasts"]
 	path = vim/bundle/color-railscasts
-	url = git://github.com/jpo/vim-railscasts-theme.git
+	url = https://github.com/jpo/vim-railscasts-theme.git
 [submodule "vim/bundle/plugin-gitv"]
 	path = vim/bundle/plugin-gitv
-	url = git://github.com/gregsexton/gitv.git
+	url = https://github.com/gregsexton/gitv.git
 [submodule "vim/bundle/plugin-pandoc"]
 	path = vim/bundle/plugin-pandoc
-	url = git://github.com/vim-pandoc/vim-pandoc.git
+	url = https://github.com/vim-pandoc/vim-pandoc.git
 [submodule "vim/bundle/plugin-auto_pairs"]
 	path = vim/bundle/plugin-auto_pairs
-	url = git://github.com/jiangmiao/auto-pairs.git
+	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "vim/bundle/plugin-surround"]
 	path = vim/bundle/plugin-surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/plugin-ctrlp"]
 	path = vim/bundle/plugin-ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
+	url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/plugin-go"]
 	path = vim/bundle/plugin-go
-	url = git://github.com/jnwhiteh/vim-golang.git
+	url = https://github.com/jnwhiteh/vim-golang.git
