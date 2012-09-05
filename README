@@ -23,15 +23,13 @@ How to use
     Eg:
         $ ln -s ~/Apps/gavim/.vim ~/.vim
         $ ln -s ~/Apps/gavim/.vimrc ~/.vimrc
-
   Or,
-
   # place .vim and .vimrc directly in your home directory
     Eg: $ cp -r gavim/* ~/
 
 
-How to install (from source)
-----------------------------
+How to use (from source)
+------------------------
 1. Clone this repository
 2. In the cloned directory run:
    $ git submodule update --init
