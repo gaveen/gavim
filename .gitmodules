@@ -49,3 +49,6 @@
 [submodule "vim/bundle/plugin-go"]
 	path = vim/bundle/plugin-go
 	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "vim/bundle/color-jellybeans"]
+	path = vim/bundle/color-jellybeans
+	url = https://github.com/nanotech/jellybeans.vim.git
