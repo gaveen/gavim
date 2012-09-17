@@ -192,12 +192,13 @@ if exists('s:use_CSApprox')
   colorscheme monokai
   map <F5> <Esc>:colorscheme railscasts-nm<CR>
   map <F6> <Esc>:colorscheme monokai<CR>
-  map <F7> <Esc>:colorscheme codeburn<CR>
+  map <F7> <Esc>:colorscheme Tomorrow<CR>
 elseif exists('s:use_guicolorscheme')
   colorscheme dc2
   runtime! bundle/plugin-guicolorscheme-1.2/guicolorscheme.vim
-  map <F5> <Esc>:GuiColorScheme railscasts-nm<CR>
+  map <F5> <Esc>:colorscheme Tomorrow-Night<CR>
   map <F6> <Esc>:colorscheme dc2<CR>
+  map <F7> <Esc>:colorscheme Tomorrow<CR>
 else
   colorscheme default
 endif
