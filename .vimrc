@@ -30,6 +30,7 @@ set mouse=a                           " enable mouse in all modes
 set list                              " show non-print characters,...
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spaces
 set number                            " show line numbers
+set cursorline                        " highlight the line with the cursor
 
 set guioptions-=T                     " no toolbar in gvim
 set guioptions-=m                     " no menubar in gvim
