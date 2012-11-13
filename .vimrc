@@ -167,7 +167,7 @@ source ~/.vim/snippets/support_functions.vim
 autocmd vimenter * call ExtractSnips("~/.vim/snippets/html", "eruby")
 autocmd vimenter * call ExtractSnips("~/.vim/snippets/html", "php")
 
-" Plugin: LaTeX - configuration (plugin not bundled in gavim2)
+" Plugin: LaTeX - configuration (plugin not bundled in gavim
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 

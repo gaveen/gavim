@@ -9,7 +9,7 @@ How to use
 ----------
 1. Download the latest file from:
     https://github.com/downloads/gaveen/gavim/gavim.tar.xz
-    Eg: $ wget -c is.gd/gavim_xz
+    Eg: $ wget -c github.com/downloads/gaveen/gavim/gavim.tar.xz
 2. Extract the downloaded XZ compressed tar file: gavim.tar.xz
     Eg: $ tar xJvf gavim.tar.xz
 3. Rename the extracted 'gavim-xxxxxxxx' to 'gavim' if already isn't
@@ -93,7 +93,9 @@ These are the plugins I've included in this set of files.
 
 Newer Vim setups already have some great features like spell checking,
 word completion, code folding, etc. A load of colorchemes are also
-included (both light and dark themes) to choose from.
+included (both light and dark themes) to choose from. Also please see
+the comments in the .vimrc file to find more useful tweaks already
+configured and ready to be used.
 
 Credit should go to everyone who brought you vim, plugins, related
 tools, documentation, provide help and more. Also a big thank you to
