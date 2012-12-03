@@ -52,6 +52,15 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" Map shortcuts to copy/cut to, and paste from X clipboard, for normal/visual
+" selections on vim verions compiled with '+xterm_clipboard'. Eg: gvim
+nnoremap <leader>y "+yy               " copy with...
+vnoremap <leader>y "+yy               " <leader>y
+nnoremap <leader>x "+x                " cut with...
+vnoremap <leader>x "+x                " <leader>x
+nnoremap <leader>p "+p                " paste with...
+vnoremap <leader>p "+p                " <leader>p
+
 " Set the keys to turn spell checking on/off
 map <F8> <Esc>:setlocal spell spelllang=en_us<CR>
 map <F9> <Esc>:setlocal nospell<CR>
