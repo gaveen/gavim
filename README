@@ -8,8 +8,8 @@ in any decent Linux system.
 How to use
 ----------
 1. Download the latest file from:
-    https://github.com/downloads/gaveen/gavim/gavim.tar.xz
-    Eg: $ wget -c github.com/downloads/gaveen/gavim/gavim.tar.xz
+    https://dl.dropbox.com/u/435850/gavim.tar.xz
+    Eg: $ wget -c https://dl.dropbox.com/u/435850/gavim.tar.xz
 2. Extract the downloaded XZ compressed tar file: gavim.tar.xz
     Eg: $ tar xJvf gavim.tar.xz
 3. Rename the extracted 'gavim-xxxxxxxx' to 'gavim' if already isn't
