@@ -54,8 +54,8 @@ vnoremap <F1> <ESC>
 
 " Map <leader>y, x and p as shortcuts for copy, cut and paste (respectively)
 " to/from system (X) clipboard when supported (Eg: gvim).
-nnoremap <leader>y "+yy
-vnoremap <leader>y "+yy
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
 nnoremap <leader>x "+x
 vnoremap <leader>x "+x
 nnoremap <leader>p "+p
