@@ -199,14 +199,12 @@ nnoremap <leader>t :ConqueTermSplit bash<cr>
 " Set color scheme and shortcut keys
 if exists('s:use_CSApprox')
   colorscheme monokai
-  map <F5> <Esc>:colorscheme railscasts-nm<CR>
-  map <F6> <Esc>:colorscheme monokai<CR>
-  map <F7> <Esc>:colorscheme Tomorrow<CR>
+  map <F5> <Esc>:colorscheme monokai<CR>
+  map <F6> <Esc>:colorscheme railscasts-nm<CR>
 elseif exists('s:use_guicolorscheme')
   colorscheme Tomorrow-Night
-  map <F5> <Esc>:colorscheme dc2<CR>
-  map <F6> <Esc>:colorscheme Tomorrow-Night<CR>
-  map <F7> <Esc>:colorscheme Tomorrow<CR>
+  map <F5> <Esc>:colorscheme Tomorrow-Night<CR>
+  map <F6> <Esc>:colorscheme dc2<CR>
   runtime! bundle/plugin-guicolorscheme-1.2/guicolorscheme.vim
 else
   colorscheme default
