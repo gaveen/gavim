@@ -1,36 +1,42 @@
-gavim - My Vim Configuration
-============================
+gavim - A bunch of Vim configuration files
+==========================================
 
-This is the Vim configuration I actually use. It should be usable
-in any decent Linux system.
+Vim is by far one of the most powerful text editors around. And this
+distribution of Vim files named "gavim" contains some tweaks & tricks
+I use with Vim. Therefore if you are new to Vim, please take a little
+time to learn proper Vim use before using a distribution like this.
+
+I've tried to strike a balance between convenient power use of Vim
+and preserving the Vim way of text editing. Hopefully, I'm not
+impairing the Vim-fu of those few who have started using 'gavim'. :)
+
+I have been using this on a host of different Linux distributions
+without trouble. So it should work fine on a decent Linux system.
+Let me know if you think of any improvements.
 
 
-How to use
-----------
+How to use (without Git)
+------------------------
 1. Download the latest file from:
     https://dl.dropbox.com/u/435850/gavim.tar.xz
     Eg: $ wget -c https://dl.dropbox.com/u/435850/gavim.tar.xz
 2. Extract the downloaded XZ compressed tar file: gavim.tar.xz
     Eg: $ tar xJvf gavim.tar.xz
-3. Rename the extracted 'gavim-xxxxxxxx' to 'gavim' if already isn't
+3. Rename the extracted 'gavim-xxxxxxxx' to 'gavim'
     Eg: $ mv gavim-xxxxxxxx gavim
-4. Then you can
-  Either
-  # place "gavim" somewhere else
+4. Then you can place "gavim" somewhere and link .vim & .vimrc
     Eg: $ mv gavim ~/Apps/
-    And,
-    Link "gavim/.vim/" as "~/.vim"  and  "gavim/.vimrc" as "~/.vimrc"
-    Eg:
         $ ln -s ~/Apps/gavim/.vim ~/.vim
         $ ln -s ~/Apps/gavim/.vimrc ~/.vimrc
   Or,
-  # place .vim and .vimrc directly in your home directory
+  copy the contents of gavim (i.e.: .vim & .vimrc) to your home
+  directory. But I recommend you use the above method instead.
     Eg: $ cp -r gavim/* ~/
 
 
-How to use (from source)
-------------------------
-1. Clone this repository
+How to use (with Git)
+---------------------
+1. Clone the repository: https://github.com/gaveen/gavim.git
 2. In the cloned directory run:
    $ git submodule update --init
 3. Delete conflicting snippets by running:
@@ -40,10 +46,70 @@ How to use (from source)
   II) .vimrc as ~/.vimrc
 
 
-How to update (from source)
----------------------------
+How to update (with Git)
+------------------------
 1. In the cloned directory run:
    $ git pull && git submodule update
+
+
+Tricks
+------
+Here are some of the significan tweaks I've made. Please read the
+comments in the .vimrc file to understand how these were done.
+
+  - Map Leader Key to ","
+      Easier to reach from home row
+  - Function Key shortcuts
+      Esc:                                            <F1>
+      Toggles indentation when pasting:               <F2>
+      Toggles auto-completing matching pairs:         <F3>
+      Toggles spell checking (default lang: en_US):   <F4>
+      Applies main color scheme:                      <F5>
+      Applies alternative color scheme:               <F6>
+      Go to previous buffer:                          <F7>
+      Go to next buffer:                              <F8>
+  - Sortcuts with system clipbard when supported
+      Copy:                                           <leader>y
+      Cut:                                            <leader>x
+      Paste:                                          <leader>p
+  - Write to a file with 'sudo' privileges:           :w!!
+  - Toggle commenting the selection                   <leader>c<space>
+  - Clear highlighting searched patterns:             <leader><space>
+  - See and manage all open buffers:                  <leader>bb
+  - Compare the changes since the last save (write):  <leader>?
+  - Toggle directory tree pane:                       <leader>d
+  - Toggle temporary read-only buffer:                <leader>s
+  - Terminal withing Vim:                             <leader>t
+      Works like your shell. Exit like a buffer with  :q
+  - Auto-complete based on words & syntax awareness:  <ctrl>n
+  - Toggle code folds based on syntax:                za
+  - See spelling suggestion for incorrect words:      z=
+  - Automatic completion of matching pairs
+      Eg: (), [], {}, '', "", etc.
+  - Show open buffers and active one in the status line
+  - Default to use 2 spaces instead of tab
+  - Show non printable characters such as: tab, trailing spaces
+      Exceptions configured for: go, python, shell
+  - A load of colorschemes to choose from (both dark and light)
+      Too much actually. Will trim the number in future.
+
+Also, please note some of these are in-built Vim features and some
+comes from plugins. Therefore please refer the relevent documentation
+to find additional shortcuts & configuration options.
+
+
+Plugins
+-------
+I have included a set of plugins I find useful. Please find these
+inside the .vim/bundle/ directory with names starting with "plugin-".
+As for the current list, they are:
+      ack, auto-pairs, bufexplorer, buftabs, conque, csapprox, ctrlp,
+      fugitive, gitv, go, guicolorscheme, matchit, nerdcommenter,
+      nerdtree, pandoc, puppet, rails, ruby-refactoring, scratch,
+      snipmate, surround, vcscommand
+
+Additionally I'm using Pathogen with Git submodules to manage Vim
+plugins.
 
 
 Dependencies
@@ -63,43 +129,12 @@ pick what you want to use.
   # python - if you plan to use the Conque Terminal i.e., <leader>t
     Package: Fedora family => python, Debian family => python
   # vim-latex - Vim LaTeX Suite plugin to use vim as a LaTeX/TeX IDE
-    Package: Fedora family => vim-latex, Debian family => vim-latexsuite
+    Package: Fedora family => vim-latex, Debian => vim-latexsuite
 
-
-Plugins
--------
-These are the plugins I've included in this set of files.
-  - ack (pattern matching) - :Ack pattern optional_path
-  - auto-pairs (auto-complete matching pairs) - <F3> to toggle
-  - bufexploreer (buffer explorer) - <leader>bb
-  - conque (embedded terminal) - <leader>t
-  - csapprox (use GUI colorchemes in terminal)
-  - ctrlp (fuzzy find) - <ctrl>p
-  - fugitive (Git wrapper)
-  - gitv (gitk/gitg-like git commit viewer for fugitive)
-  - guicolorscheme (CSApprox alternative) - :GuiColorScheme
-  - matchit (pair matching) - %
-  - nerdcommenter (commenting) - <leader>c<space>
-  - nerdtree (file browser) - <leader>d
-  - pandoc (pandoc editing)
-  - pathogen (plugin bundle handling)
-  - rails (for Ruby on Rails)
-  - ruby-refactoring (for Ruby)
-  - scratch (temporary buffer) - <leader>s
-  - snipmate (snippets)
-  - surround (easy working with matching pairs)
-  - vcscommand (generic VCS frontend)
-
-
-Newer Vim setups already have some great features like spell checking,
-word completion, code folding, etc. A load of colorchemes are also
-included (both light and dark themes) to choose from. Also please see
-the comments in the .vimrc file to find more useful tweaks already
-configured and ready to be used.
 
 Credit should go to everyone who brought you vim, plugins, related
 tools, documentation, provide help and more. Also a big thank you to
-official vim docs, Vim Tips Wiki and #vim channel.
+official vim docs, Vim Tips Wiki and #vim channel on Freenode.
 
 NOTE: uncomment line "let g:csa_Capable = 1" to explicitly say that
 your vim is CSApprox capable even if :echo has('gui') returns 0.
