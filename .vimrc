@@ -52,6 +52,9 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" Set the keys to toggle spell checking
+map <F4> :setlocal spell! spelllang=en_us<CR>
+
 " Map F7/F8 to traverse previous/next buffer
 noremap <F7> :bprev<CR>
 noremap <F8> :bnext<CR>
@@ -64,9 +67,6 @@ nnoremap <leader>x "+x
 vnoremap <leader>x "+x
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
-
-" Set the keys to toggle spell checking
-map <F4> :setlocal spell! spelllang=en_us<CR>
 
 " Remove highlighting search results
 nnoremap <leader><space> :noh <CR>
