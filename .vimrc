@@ -52,9 +52,9 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-" Map F8/F9 to traverse previous/next buffer
-noremap <F8> :bprev<CR>
-noremap <F9> :bnext<CR>
+" Map F7/F8 to traverse previous/next buffer
+noremap <F7> :bprev<CR>
+noremap <F8> :bnext<CR>
 
 " Map <leader>y, x and p as shortcuts for copy, cut and paste (respectively)
 " to/from system (X) clipboard when supported (Eg: gvim).
