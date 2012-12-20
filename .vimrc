@@ -61,9 +61,8 @@ vnoremap <leader>x "+x
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 
-" Set the keys to turn spell checking on/off
-map <F8> <Esc>:setlocal spell spelllang=en_us<CR>
-map <F9> <Esc>:setlocal nospell<CR>
+" Set the keys to toggle spell checking
+map <F4> :setlocal spell! spelllang=en_us<CR>
 
 " Remove highlighting search results
 nnoremap <leader><space> :noh <CR>
