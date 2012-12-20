@@ -16,7 +16,6 @@ set incsearch                         " find as entering pattern
 set t_Co=256                          " uses 256 colors
 set ignorecase                        " case insensitive patterns,...
 set smartcase                         " when only lowercase is used
-set pastetoggle=<F2>                  " F2 toggles indenting when pasting
 set wildmenu                          " use command-line completion menu,...
 set wildmode=longest:full             " with wildmode
 set bs=indent,eol,start               " allow backspacing over everything
@@ -31,12 +30,13 @@ set list                              " show non-print characters,...
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spaces
 set number                            " show line numbers
 set cursorline                        " highlight the line with the cursor
+set pastetoggle=<F2>                  " F2 toggles indenting when pasting
 
 set guioptions-=T                     " no toolbar in gvim
 set guioptions-=m                     " no menubar in gvim
 set guioptions-=r                     " no right scrollbar in gvim
 set guioptions-=L                     " no left scrollbar when v.split in gvim
-set guifont=DejaVu\ Sans\ Mono\ 10    " set font in gvim
+"set guifont=DejaVu\ Sans\ Mono\ 10    " set font in gvim
 
 filetype plugin indent on             " enable filetype use
 
