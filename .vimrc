@@ -6,13 +6,13 @@ endif
 filetype off                          " disable filetype use. Enabled later
 call pathogen#infect()
 
-set nocompatible                      " don't try to be strictly vi-like
-set modelines=0                       " don't use modelines (for security)
+set nocompatible                      " don't be strictly old vi-like
+set modelines=0                       " don't use modelines
 set viminfo='20,\"50                  " use a viminfo file,...
-set history=50                        " limit history
+set history=50                        " and limit history
 set ruler                             " show the cursor position
 set title                             " show title
-set incsearch                         " find as entering pattern
+set incsearch                         " find while pattern being entered
 set t_Co=256                          " uses 256 colors
 set ignorecase                        " case insensitive patterns,...
 set smartcase                         " when only lowercase is used
@@ -40,7 +40,7 @@ set guioptions-=L                     " no left scrollbar when v.split in gvim
 
 filetype plugin indent on             " enable filetype use
 
-setlocal ofu=syntaxcomplete#Complete  " enable syntax based omni completion
+setlocal ofu=syntaxcomplete#Complete  " enable syntax based word completion
 setlocal foldmethod=syntax            " folding uses syntax for folding
 setlocal nofoldenable                 " don't start with folded lines
 
@@ -52,10 +52,10 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-" Set the keys to toggle spell checking
+" Map F4 key to toggle spell checking
 map <F4> :setlocal spell! spelllang=en_us<CR>
 
-" Map F7/F8 to traverse previous/next buffer
+" Map F7/F8 to go to previous/next buffer
 noremap <F7> :bprev<CR>
 noremap <F8> :bnext<CR>
 
@@ -68,7 +68,7 @@ vnoremap <leader>x "+x
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 
-" Remove highlighting search results
+" Clear the search result highlighting
 nnoremap <leader><space> :noh <CR>
 
 " Map w!! to write file with sudo, when forgot to open with sudo.
