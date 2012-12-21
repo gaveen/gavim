@@ -88,6 +88,7 @@ Notes if you are new to Vim:
   - See and manage all open buffers:                  <leader>bb
   - Toggle commenting the selection                   <leader>c<space>
   - Clear highlighting searched patterns:             <leader><space>
+  - Fuzzy find pattern in files, buffers, etc.        <ctrl>p
   - Auto-complete (word/syntax) [in Insert mode]:     <ctrl>n
   - Auto-complete code snippets [in Insert mode]:     <tab>
   - Toggle code folds based on syntax:                za
@@ -99,9 +100,14 @@ Notes if you are new to Vim:
       Exceptions configured for: go, python, shell
   - Show non printable characters such as: tab, trailing spaces
   - List and indicate open/active buffers in the bottom status bar
+  - Refactoring support for Ruby
+      via ruby-refactoring plugin
+  - Syntax highlighting for many file types
+      With additional support for Go, Puppet and Ruby on Rails, etc.
+  - Work with revision control systems via vcscommand plugin
+      With advanced support for Git via fugitive and gitv plugins
   - A load of colorschemes to choose from (both dark and light)
       Too much actually. Will trim the number in future.
-  - Syntax highlighting for many file types
 
 Also, please note some of these are in-built Vim features and some
 comes from plugins. Therefore please refer the relevant documentation
