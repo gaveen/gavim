@@ -58,6 +58,8 @@ map <F4> :setlocal spell! spelllang=en_us<CR>
 " Map F7/F8 to go to previous/next buffer
 noremap <F7> :bprev<CR>
 noremap <F8> :bnext<CR>
+" Map F9 for a prompt to input the buffer number. Then hit <CR> (Enter) to jump.
+noremap <F9> :b 
 
 " Map <leader>y, x and p as shortcuts for copy, cut and paste (respectively)
 " to/from system (X) clipboard when supported (Eg: gvim).
@@ -145,13 +147,13 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
-nnoremap <leader>? :DiffSaved<cr>
+nnoremap <leader>? :DiffSaved<CR>
 
 " Plugin: Auto Pairs - key to toggle auto-complete
 let g:AutoPairsShortcutToggle = '<F3>'
 
 " Plugin: NERDTree - keys to toggle NERDTree
-nnoremap <leader>d :NERDTreeToggle<cr>
+nnoremap <leader>d :NERDTreeToggle<CR>
 " Plugin: NERDTree - use colors, cursorline and return/enter key
 let NERDChristmasTree = 1
 let NERDTreeHighlightCursorline = 1
@@ -195,7 +197,7 @@ let vala_no_tab_space_error = 1
 "let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
 
 " Plugin: keys to launch conque - terminal
-nnoremap <leader>t :ConqueTermSplit bash<cr>
+nnoremap <leader>t :ConqueTermSplit bash<CR>
 
 " Set color scheme and shortcut keys
 if exists('s:use_CSApprox')
