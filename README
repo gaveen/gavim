@@ -85,7 +85,7 @@ Notes if you are new to Vim:
   - Toggle directory tree pane:                       <leader>d
   - Terminal withing Vim (exit with :q):              <leader>t
   - Toggle temporary jotting area (not saved):        <leader>s
-  - See and manage all open buffers:                  <leader>bb
+  - See and manage all open buffers:                  <leader>be
   - Toggle commenting the selection                   <leader>c<space>
   - Clear highlighting searched patterns:             <leader><space>
   - Fuzzy find pattern in files, buffers, etc.        <ctrl>p

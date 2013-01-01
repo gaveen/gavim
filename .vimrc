@@ -150,9 +150,6 @@ nnoremap <leader>? :DiffSaved<cr>
 " Plugin: Auto Pairs - key to toggle auto-complete
 let g:AutoPairsShortcutToggle = '<F3>'
 
-" Plugin: BufExplorer - easier invoke keys
-nnoremap <leader>bb :BufExplorer<cr>
-
 " Plugin: NERDTree - keys to toggle NERDTree
 nnoremap <leader>d :NERDTreeToggle<cr>
 " Plugin: NERDTree - use colors, cursorline and return/enter key
