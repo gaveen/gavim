@@ -192,11 +192,18 @@ let vala_comment_strings = 1
 let vala_space_errors = 1
 let vala_no_tab_space_error = 1
 
+" Plugin: buftabs - configuration
+let g:buftabs_only_basename=1
+let g:buftabs_separator = ": "
+let g:buftabs_marker_start = "[#"
+let g:buftabs_marker_end = "]"
+let g:buftabs_marker_modified = " *"
+
 " Plugin: Ack - uncomment suitable line if configuration is necessary
 "let g:ackprg="ack -H --nocolor --nogroup"         " if ack --version < 1.92
 "let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
 
-" Plugin: keys to launch conque - terminal
+" Plugin: Conque - keys to launch conque terminal
 nnoremap <leader>t :ConqueTermSplit bash<CR>
 
 " Set color scheme and shortcut keys
