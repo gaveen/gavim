@@ -74,6 +74,7 @@ Notes if you are new to Vim:
       Apply alternative color scheme:                 <F6>
       Go to previous buffer:                          <F7>
       Go to next buffer:                              <F8>
+      Ask for buffer number to go to (hit Enter):     <F9>
   - Shortcuts for system clipboard operations in Vim
     setups which support them
       Regular Copy, Cut & Paste remains:              y,x and p
