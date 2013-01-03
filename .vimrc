@@ -114,24 +114,11 @@ if has("cscope") && filereadable("/usr/bin/cscope")
    set csverb
 endif
 
-" Explicitly tell vim is CSApprox capable. Uncommenting would make
-" sure CSApprox is used, provided other dependencies are fulfilled
-"let g:csa_Capable = 1
-
 " Switch syntax highlighting on, when the terminal has colors
-" Use CSApprox or guicolorscheme plugins based on gui support
 " Also switch on highlighting the last used search pattern
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
-  if &t_Co == 256 || &t_Co == 88
-    if has('gui') || exists("g:csa_Capable")
-      let s:use_CSApprox = 1
-    else
-      let g:CSApprox_loaded = 1
-      let s:use_guicolorscheme = 1
-    endif
-  endif
 endif
 
 " No blinking cursor. See http://www.linuxpowertop.org/known.php
@@ -194,7 +181,7 @@ let vala_no_tab_space_error = 1
 
 " Plugin: buftabs - configuration
 let g:buftabs_only_basename=1
-let g:buftabs_separator = ": "
+let g:buftabs_separator = ":"
 let g:buftabs_marker_start = "[#"
 let g:buftabs_marker_end = "]"
 let g:buftabs_marker_modified = " *"
@@ -206,16 +193,26 @@ let g:buftabs_marker_modified = " *"
 " Plugin: Conque - keys to launch conque terminal
 nnoremap <leader>t :ConqueTermSplit bash<CR>
 
-" Set color scheme and shortcut keys
-if exists('s:use_CSApprox')
-  colorscheme monokai
-  map <F5> <Esc>:colorscheme monokai<CR>
-  map <F6> <Esc>:colorscheme railscasts-nm<CR>
-elseif exists('s:use_guicolorscheme')
-  colorscheme Tomorrow-Night
-  map <F5> <Esc>:colorscheme Tomorrow-Night<CR>
-  map <F6> <Esc>:colorscheme dc2<CR>
+" Plugin: CSApprox - configuration to enable CSApprox explicitly
+"let s:use_CSApprox = 1
+" If the colorscheme does not look ok, try after uncommenting the above line
+
+if version >= 700 && &term != 'cygwin' && !has('gui_running')
+  if &t_Co == 256 || &t_Co == 88
+    if !has('gui') && !exists("s:use_CSApprox")
+      let s:use_GUIColorScheme = 1
+    endif
+  else
+    colorscheme default
+  endif
+endif
+
+" When a colorscheme has only a GUI version, try to apply it in non-GUI Vim
+if exists('s:use_GUIColorScheme')
   runtime! bundle/plugin-guicolorscheme-1.2/guicolorscheme.vim
+  GuiColorScheme nucolors
 else
-  colorscheme default
+  colorscheme nucolors
+  map <F5> <Esc>:colorscheme nucolors<CR>
+  map <F6> <Esc>:colorscheme monokai<CR>
 endif
