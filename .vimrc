@@ -31,6 +31,9 @@ set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spaces
 set number                            " show line numbers
 set cursorline                        " highlight the line with the cursor
 set pastetoggle=<F2>                  " F2 toggles indenting when pasting
+set autoread                          " reload file if changed outside Vim
+set autowrite                         " save file on some commands
+set scrolloff=1                       " minimal no. of lines around cursor
 
 set guioptions-=T                     " no toolbar in gvim
 set guioptions-=m                     " no menubar in gvim
@@ -47,7 +50,7 @@ setlocal nofoldenable                 " don't start with folded lines
 " Set the leader key
 let mapleader = ","
 
-" Map F1 key to Esc.
+" Map F1 key to Esc
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
@@ -60,6 +63,9 @@ noremap <F7> :bprev<CR>
 noremap <F8> :bnext<CR>
 " Map F9 for a prompt to input the buffer number. Then hit <CR> (Enter) to jump.
 noremap <F9> :b 
+
+" Make Y behave similar to C and D (from cursor to end of line)
+nnoremap Y y$
 
 " Map <leader>y, x and p as shortcuts for copy, cut and paste (respectively)
 " to/from system (X) clipboard when supported (Eg: gvim).
