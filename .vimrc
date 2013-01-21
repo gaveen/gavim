@@ -145,12 +145,13 @@ nnoremap <leader>? :DiffSaved<CR>
 " Plugin: Auto Pairs - key to toggle auto-complete
 let g:AutoPairsShortcutToggle = '<F3>'
 
-" Plugin: NERDTree - keys to toggle NERDTree
-nnoremap <leader>d :NERDTreeToggle<CR>
 " Plugin: NERDTree - use colors, cursorline and return/enter key
+let NERDTreeHijackNetrw = 0
 let NERDChristmasTree = 1
 let NERDTreeHighlightCursorline = 1
-let NERDTreeMapActivateNode='<CR>'
+let NERDTreeMapActivateNode = '<CR>'
+" Plugin: NERDTree - keys to toggle NERDTree
+nnoremap <leader>d :NERDTreeToggle<CR>
 
 " Plugin: Scratch - define invoke function
 function! ToggleScratch()
