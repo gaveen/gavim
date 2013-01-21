@@ -153,6 +153,11 @@ let NERDTreeMapActivateNode = '<CR>'
 " Plugin: NERDTree - keys to toggle NERDTree
 nnoremap <leader>d :NERDTreeToggle<CR>
 
+" Plugin: Tagbar - keys to toggle Tagbar
+nnoremap <leader>t :TagbarToggle<CR>
+" Plugin: Tagbar - give focus the Tagbar when it's opened
+let g:tagbar_autofocus = 1
+
 " Plugin: Scratch - define invoke function
 function! ToggleScratch()
   if expand('%') == g:ScratchBufferName
@@ -198,7 +203,7 @@ let g:buftabs_marker_modified = " *"
 "let g:ackprg="ack-grep -H --nocolor --nogroup"    " for Debian/Ubuntu
 
 " Plugin: Conque - keys to launch conque terminal
-nnoremap <leader>t :ConqueTermSplit bash<CR>
+nnoremap <leader>c :ConqueTermSplit bash<CR>
 
 " Plugin: CSApprox - configuration to enable CSApprox explicitly
 "let s:use_CSApprox = 1

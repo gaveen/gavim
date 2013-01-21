@@ -84,7 +84,8 @@ Notes if you are new to Vim:
   - Save a file with 'sudo' privileges:               :w!!
   - Compare the changes since the last save (write):  <leader>?
   - Toggle directory tree pane:                       <leader>d
-  - Terminal withing Vim (exit with :q):              <leader>t
+  - Toggle tagbar pane:                               <leader>t
+  - Terminal withing Vim (exit with :q):              <leader>c
   - Toggle temporary jotting area (not saved):        <leader>s
   - See and manage all open buffers:                  <leader>be
   - Toggle commenting the selection                   <leader>c<space>
@@ -113,6 +114,8 @@ Notes if you are new to Vim:
 Also, please note some of these are in-built Vim features and some
 comes from plugins. Therefore please refer the relevant documentation
 to find additional shortcuts & configuration options.
+    Eg: Type :h easymotion
+        (without quotes) to see help about EasyMotion plugin
 
 
 Plugins
@@ -123,7 +126,7 @@ As for the current list, they are:
       ack, auto-pairs, bufexplorer, buftabs, conque, csapprox, ctrlp,
       fugitive, gitv, go, guicolorscheme, matchit, nerdcommenter,
       nerdtree, pandoc, puppet, rails, ruby-refactoring, scratch,
-      snipmate, surround, vcscommand
+      snipmate, surround, tagbar, vcscommand
 
 Additionally I'm using Pathogen with Git submodules to manage Vim
 plugins.
@@ -143,6 +146,8 @@ pick what you want to use.
   # ack - a better grep alternative if you plan to use :Ack
     Package: Fedora family => ack, Debian family => ack-grep
       if you use a Debian family OS, uncomment necessary line in vimrc
+  # exuberant ctags - to use the tagbar feature
+    Package: Fedora family => ctags, Debian family => exuberant-ctags
   # python - if you plan to use the Conque Terminal i.e., <leader>t
     Package: Fedora family => python, Debian family => python
   # vim-latex - Vim LaTeX Suite plugin to use vim as a LaTeX/TeX IDE
@@ -152,3 +157,6 @@ pick what you want to use.
 Credit should go to everyone who brought you vim, plugins, related
 tools, documentation, provide help and more. Also a big thank you to
 official vim docs, Vim Tips Wiki and #vim channel on Freenode.
+
+Tip:  If you can't seem to access plugin related help, run :Helptags
+      This should be needed only once, in case of a help docs change.
