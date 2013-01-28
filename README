@@ -109,8 +109,8 @@ Notes if you are new to Vim:
       With additional support for Go, Puppet and Ruby on Rails, etc.
   - Work with revision control systems via vcscommand plugin
       With advanced support for Git via fugitive and gitv plugins
+  - Patterns are case insensitive when uppercase letters are not used
   - A load of colorschemes to choose from (both dark and light)
-      Too much actually. Will trim the number in future.
 
 
 Help Documentation
