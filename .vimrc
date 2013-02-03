@@ -149,7 +149,7 @@ let g:AutoPairsShortcutToggle = '<F3>'
 let NERDTreeHijackNetrw = 0
 let NERDChristmasTree = 1
 let NERDTreeHighlightCursorline = 1
-let NERDTreeMapActivateNode = '<CR>'
+
 " Plugin: NERDTree - keys to toggle NERDTree
 nnoremap <leader>d :NERDTreeToggle<CR>
 
