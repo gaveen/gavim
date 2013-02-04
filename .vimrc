@@ -56,7 +56,7 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 " Map F4 key to toggle spell checking
-map <F4> :setlocal spell! spelllang=en_us<CR>
+noremap <F4> :setlocal spell! spelllang=en_us<CR>
 
 " Map F7/F8 to go to previous/next buffer
 noremap <F7> :bprev<CR>
@@ -149,14 +149,13 @@ let g:AutoPairsShortcutToggle = '<F3>'
 let NERDTreeHijackNetrw = 0
 let NERDChristmasTree = 1
 let NERDTreeHighlightCursorline = 1
-
 " Plugin: NERDTree - keys to toggle NERDTree
 nnoremap <leader>d :NERDTreeToggle<CR>
 
-" Plugin: Tagbar - keys to toggle Tagbar
-nnoremap <leader>t :TagbarToggle<CR>
 " Plugin: Tagbar - give focus the Tagbar when it's opened
 let g:tagbar_autofocus = 1
+" Plugin: Tagbar - keys to toggle Tagbar
+nnoremap <leader>t :TagbarToggle<CR>
 
 " Plugin: Scratch - define invoke function
 function! ToggleScratch()
@@ -167,7 +166,7 @@ function! ToggleScratch()
   endif
 endfunction
 " Plugin: Scratch - keys to toggle Scratch buffer
-map <leader>s :call ToggleScratch()<CR>
+nnoremap <leader>s :call ToggleScratch()<CR>
 
 " Plugin: Rails - turn off rails related things in statusbar
 let g:rails_statusline=0
@@ -225,6 +224,6 @@ if exists('s:use_GUIColorScheme')
   GuiColorScheme nucolors
 else
   colorscheme nucolors
-  map <F5> <Esc>:colorscheme nucolors<CR>
-  map <F6> <Esc>:colorscheme monokai<CR>
+  noremap <F5> <Esc>:colorscheme nucolors<CR>
+  noremap <F6> <Esc>:colorscheme monokai<CR>
 endif
