@@ -34,6 +34,7 @@ set pastetoggle=<F2>                  " F2 toggles indenting when pasting
 set autoread                          " reload file if changed outside Vim
 set autowrite                         " save file on some commands
 set scrolloff=1                       " minimal no. of lines around cursor
+"set textwidth=78                      " maximum number of characters per line
 
 set guioptions-=T                     " no toolbar in gvim
 set guioptions-=m                     " no menubar in gvim
@@ -63,6 +64,12 @@ noremap <F7> :bprev<CR>
 noremap <F8> :bnext<CR>
 " Map F9 for a prompt to input the buffer number. Then hit <CR> (Enter) to jump.
 noremap <F9> :b 
+" Map F10 for a promt to input where to show a margin. Then hit <CR> to show.
+noremap <F10> :set colorcolumn=80
+
+" Map Tab key to % (for working with matching pairs) in normal & visual modes.
+nnoremap <tab> %
+vnoremap <tab> %
 
 " Uncomment the following section to stop using arrow keys (use hjkl instead).
 "nnoremap <up> <nop>
@@ -88,6 +95,12 @@ vnoremap <leader>p "+p
 
 " Clear the search result highlighting
 nnoremap <leader><space> :noh <CR>
+
+" Strip all trailing whitespace characters in curent file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Hardwrap current paragraph by the value set for 'textwidth'
+nnoremap <leader>Q gwip
 
 " Map w!! to write file with sudo, when forgot to open with sudo.
 cmap w!! w !sudo tee % >/dev/null

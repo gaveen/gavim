@@ -64,7 +64,7 @@ Notes if you are new to Vim:
     # a buffer to Vim is similar to what a tab is to a web browser.
 
   - Map Leader Key to:                              ,
-      Easier to reach from home row
+      Therefore <leader>t means ,t
   - Function Key shortcuts
       Map F1 as Esc to avoid mistakes:              <F1>
       Toggle auto-indenting when pasting:           <F2>
@@ -75,6 +75,8 @@ Notes if you are new to Vim:
       Go to previous buffer:                        <F7>
       Go to next buffer:                            <F8>
       Trigger jump to buffer:                       <F9>
+      Trigger show a margin:                        <F10>
+    Shortcuts F9, F10 require an input before <CR>
   - Shortcuts for system clipboard operations
     in setups which support them
       Regular Copy, Cut & Paste remains:            y,x and p
@@ -91,12 +93,14 @@ Notes if you are new to Vim:
   - Toggle commenting the selection:                <leader>c<space>
   - Clear highlighting the searched patterns:       <leader><space>
   - Trigger jump to word motion:                    <leader><leader>w
+  - Remove trailing whitespaces in current file:    <leader>W
+  - Hard-wrap lines in the current paragraph:       <leader>Q
   - Fuzzy find pattern in files, buffers, etc.:     <ctrl>p
   - Auto-complete (word/syntax) [in Insert mode]:   <ctrl>n
   - Auto-complete code snippets [in Insert mode]:   <tab>
   - Toggle code folds based on syntax:              za
   - Spelling suggestion for the word under cursor:  z=
-  - Jump to the matching other of a pair:           %
+  - Jump to matching other of a pair (same as %):   <tab>
   - Automatic completion of matching pairs
       Eg: (), [], {}, '', "", etc.
   - Default to use 2 spaces instead of tab character
