@@ -76,7 +76,7 @@ Notes if you are new to Vim:
       Go to next buffer:                            <F8>
       Trigger jump to buffer:                       <F9>
   - Shortcuts for system clipboard operations
-    setups which support them
+    in setups which support them
       Regular Copy, Cut & Paste remains:            y,x and p
       Copy to clipboard:                            <leader>y
       Cut to clipboard:                             <leader>x

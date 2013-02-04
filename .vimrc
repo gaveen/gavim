@@ -64,6 +64,16 @@ noremap <F8> :bnext<CR>
 " Map F9 for a prompt to input the buffer number. Then hit <CR> (Enter) to jump.
 noremap <F9> :b 
 
+" Uncomment the following section to stop using arrow keys (use hjkl instead).
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
+
 " Make Y behave similar to C and D (from cursor to end of line)
 nnoremap Y y$
 
