@@ -34,6 +34,7 @@ set pastetoggle=<F2>                  " F2 toggles indenting when pasting
 set autoread                          " reload file if changed outside Vim
 set autowrite                         " save file on some commands
 set scrolloff=1                       " minimal no. of lines around cursor
+"set cm=blowfish                       " encryption method in :X, -x
 "set textwidth=78                      " maximum number of characters per line
 
 set guioptions-=T                     " no toolbar in gvim
