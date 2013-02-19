@@ -81,6 +81,10 @@ vnoremap <tab> %
 "inoremap <down> <nop>
 "inoremap <left> <nop>
 "inoremap <right> <nop>
+"vnoremap <up> <nop>
+"vnoremap <down> <nop>
+"vnoremap <left> <nop>
+"vnoremap <right> <nop>
 
 " Make Y behave similar to C and D (from cursor to end of line)
 nnoremap Y y$
