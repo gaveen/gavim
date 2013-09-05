@@ -73,7 +73,7 @@ noremap <F10> :set colorcolumn=80
 nnoremap <tab> %
 vnoremap <tab> %
 
-" Uncomment the following section to stop using arrow keys (use hjkl instead).
+" Uncomment following section to stop using arrow keys (use hjkl instead).
 "nnoremap <up> <nop>
 "nnoremap <down> <nop>
 "nnoremap <left> <nop>
@@ -86,6 +86,15 @@ vnoremap <tab> %
 "vnoremap <down> <nop>
 "vnoremap <left> <nop>
 "vnoremap <right> <nop>
+
+" Use F11 key as a shortut to toggle full screen mode in gvim.
+" Requires wmctrl and a compatible WM. When ready, uncomment following section.
+"function! ToggleFullScreen()
+"  call system("wmctrl -i -r ".v:windowid." -b toggle,fullscreen")
+"  redraw
+"endfunction
+
+"nnoremap <F11> :call ToggleFullScreen()<CR>
 
 " Make Y behave similar to C and D (from cursor to end of line)
 nnoremap Y y$
