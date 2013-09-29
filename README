@@ -76,6 +76,7 @@ Notes if you are new to Vim:
       Go to next buffer:                            <F8>
       Trigger jump to buffer:                       <F9>
       Trigger show a margin:                        <F10>
+      Toggle fullscreen in gvim (default: disabled) <F11>
     Shortcuts F9, F10 require an input before <CR>
   - Shortcuts for system clipboard operations
     in setups which support them
@@ -113,6 +114,7 @@ Notes if you are new to Vim:
       With additional support for Go, Puppet and Ruby on Rails, etc.
   - Work with revision control systems via vcscommand plugin
       With advanced support for Git via fugitive and gitv plugins
+  - Disabled (by default) shortcut for full screen gvim if supported
   - Patterns are case insensitive when uppercase letters are not used
   - A load of colorschemes to choose from (both dark and light)
 
@@ -127,9 +129,9 @@ Vim comes with extensive help documentation. To find out more about a
 given topic, access the vim help by typing :h {topic}.
 Eg: to find about Vim's text folding features, type :h folding
 
-Also, please note that most of plugins come with documentation.
+Also, please note that most of the plugins come with documentation.
 Therefore please try to refer the relevant documetation the same way
-to find aout about additional shortcuts & configuration options.
+to find out more about additional shortcuts & configuration options.
 Eg: to find more about motion shortcuts enabled by EasyMotion plugin,
     type :h easymotion
 
@@ -168,10 +170,13 @@ pick what you want to use.
       if you use a Debian family OS, uncomment necessary line in vimrc
   # exuberant ctags - to use the tagbar feature
     Package: Fedora family => ctags, Debian family => exuberant-ctags
-  # python - if you plan to use the Conque Terminal i.e., <leader>t
+  # python - if you plan to use the Conque Terminal i.e., <leader>c
     Package: Fedora family => python, Debian family => python
   # vim-latex - Vim LaTeX Suite plugin to use vim as a LaTeX/TeX IDE
     Package: Fedora family => vim-latex, Debian => vim-latexsuite
+  # wmctrl - if you want to use gvim in a full screen mode
+    Package: Fedora family => wmctrl, Debian family => wmctrl
+      if your window manager supports this, uncomment necessary lines
 
 
 Credit should go to everyone who brought you vim, plugins, related
