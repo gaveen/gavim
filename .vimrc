@@ -109,7 +109,10 @@ nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 
 " Clear the search result highlighting
-nnoremap <leader><space> :noh <CR>
+nnoremap <leader><space> :noh<CR>
+
+" Toggle displaying non-printable characters
+nnoremap <leader>l :set list!<CR>
 
 " Strip all trailing whitespace characters in curent file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>

@@ -94,6 +94,7 @@ Notes if you are new to Vim:
   - Toggle commenting the selection:                <leader>c<space>
   - Clear highlighting the searched patterns:       <leader><space>
   - Trigger jump to word motion:                    <leader><leader>w
+  - Toggle displaying non-printable characters:     <leader>l
   - Remove trailing whitespaces in current file:    <leader>W
   - Hard-wrap lines in the current paragraph:       <leader>Q
   - Fuzzy find pattern in files, buffers, etc.:     <ctrl>p
