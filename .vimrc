@@ -248,10 +248,12 @@ nnoremap <leader>c :ConqueTermSplit bash<CR>
 " Plugin: CSApprox - configuration to enable CSApprox explicitly
 "let s:use_CSApprox = 1
 " If the colorscheme does not look ok, try after uncommenting the above line
+" If that makes it worse, revert back to commented state
 
 if version >= 700 && &term != 'cygwin' && !has('gui_running')
   if &t_Co == 256 || &t_Co == 88
     if !has('gui') && !exists("s:use_CSApprox")
+      let g:CSApprox_loaded = 1
       let s:use_GUIColorScheme = 1
     endif
   else
