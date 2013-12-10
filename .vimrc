@@ -13,7 +13,6 @@ set history=50                        " and limit history
 set ruler                             " show the cursor position
 set title                             " show title
 set incsearch                         " find while pattern being entered
-set t_Co=256                          " uses 256 colors
 set ignorecase                        " case insensitive patterns,...
 set smartcase                         " when only lowercase is used
 set wildmenu                          " use command-line completion menu,...
@@ -35,14 +34,17 @@ set pastetoggle=<F2>                  " F2 toggles indenting when pasting
 set autoread                          " reload file if changed outside Vim
 set autowrite                         " save file on some commands
 set scrolloff=1                       " minimal no. of lines around cursor
+set t_Co=256                          " assume environment can use 256 colors
+"set visualbell                        " flash screen instead of beeping
 "set cm=blowfish                       " encryption method in :X, -x
 "set textwidth=78                      " maximum number of characters per line
+"set colorcolumn=79                    " display a margin line
 
 set guioptions-=T                     " no toolbar in gvim
 set guioptions-=m                     " no menubar in gvim
 set guioptions-=r                     " no right scrollbar in gvim
 set guioptions-=L                     " no left scrollbar when v.split in gvim
-"set guifont=DejaVu\ Sans\ Mono\ 10    " set font in gvim
+"set guifont=Inconsolata\ Medium\ 10   " set font in gvim
 
 filetype plugin indent on             " enable filetype use
 
