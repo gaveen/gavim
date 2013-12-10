@@ -36,15 +36,15 @@ set autowrite                         " save file on some commands
 set scrolloff=1                       " minimal no. of lines around cursor
 set t_Co=256                          " assume environment can use 256 colors
 "set visualbell                        " flash screen instead of beeping
-"set cm=blowfish                       " encryption method in :X, -x
+"set cm=blowfish                       " encryption method in :X, vim -x
 "set textwidth=78                      " maximum number of characters per line
 "set colorcolumn=79                    " display a margin line
 
+"set guifont=Inconsolata\ Medium\ 10   " set font in gvim
 set guioptions-=T                     " no toolbar in gvim
 set guioptions-=m                     " no menubar in gvim
 set guioptions-=r                     " no right scrollbar in gvim
 set guioptions-=L                     " no left scrollbar when v.split in gvim
-"set guifont=Inconsolata\ Medium\ 10   " set font in gvim
 
 filetype plugin indent on             " enable filetype use
 
@@ -95,7 +95,6 @@ vnoremap <tab> %
 "  call system("wmctrl -i -r ".v:windowid." -b toggle,fullscreen")
 "  redraw
 "endfunction
-
 "nnoremap <F11> :call ToggleFullScreen()<CR>
 
 " Make Y behave similar to C and D (from cursor to end of line)
@@ -182,7 +181,6 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
-
 nnoremap <leader>? :DiffSaved<CR>
 
 " Plugin: Auto Pairs - key to toggle auto-complete
