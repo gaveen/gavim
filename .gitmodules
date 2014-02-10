@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/plugin-easymotion"]
 	path = .vim/bundle/plugin-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/plugin-rust"]
+	path = .vim/bundle/plugin-rust
+	url = https://github.com/wting/rust.vim.git
