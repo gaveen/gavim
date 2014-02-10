@@ -148,7 +148,7 @@ inside the .vim/bundle/ directory with names starting with "plugin-".
 As for the current list, they are:
       ack, auto-pairs, bufexplorer, buftabs, conque, csapprox, ctrlp,
       easymotion, fugitive, gitv, go, guicolorscheme, matchit,
-      nerdcommenter, nerdtree, pandoc, puppet, ruby-refactoring,
+      nerdcommenter, nerdtree, pandoc, puppet, ruby-refactoring, rust
       rails, scratch, snipmate, surround, tagbar, vcscommand
 
 Additionally I'm using Pathogen with Git submodules to manage Vim
@@ -161,7 +161,7 @@ Having the following ready in your system should ensure a smooth
 experience. Lack of them would *not* break vim though. You can
 pick what you want to use.
 
-  # vim and/or gvim - at least try to use version 7.2 or above.
+  # vim and/or gvim - at least try to use version 7.3 or above.
     Package: Fedora family => vim-enhanced / vim-X11,
              Debian family => vim (not default) / vim-gnome
   # git - to clone and update this repository and submodules
